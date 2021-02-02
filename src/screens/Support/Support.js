@@ -27,11 +27,38 @@ const Support = (props) => {
   return (
     <View style={{height:'100%'}}>
       <Appbar navigation={props.navigation} />
-      {/* <ImageSlider /> */}
-      <View style={{alignItems: 'center', marginVertical: 7}}>
-        <Text style={{color: '#5CB85C', fontSize: width * 0.0483091787439614}}>
-          Featured Items Support
-        </Text>
+      
+      <View>
+        <Text style= {{marginLeft: 20, marginTop: 5}}>Get help with Other issues</Text>
+
+        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
+          <Text>Issue with previous order</Text>
+        </View>
+
+        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
+          <Text>Recharge or Tech related issues</Text>
+        </View>
+
+        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
+          <Text>Start services to your building</Text>
+        </View>
+
+
+        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
+          <Text>Getting started</Text>
+        </View>
+
+        <Text>Button FAQ</Text>
+
+        <Text style= {{marginLeft: 20, marginTop: 5}}>General queries</Text>
+
+        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
+          <Text>Till what time can you place the order Everyday</Text>
+        </View>
+
+        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
+          <Text>When will the order be delivered</Text>
+        </View>
       </View>
      
     </View>

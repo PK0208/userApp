@@ -72,6 +72,9 @@ const Home = (props) => {
             
            
           </View>
+           <View style={{justifyContent: 'center', alignItems: 'center'}}> 
+          <Text style={{color: '#4B4A4A', fontSize: 20, fontWeight: 'bold'}}>Flash Sale</Text>
+          </View>
       
       <View style={{alignItems: 'center', marginVertical: 7}}>
 
