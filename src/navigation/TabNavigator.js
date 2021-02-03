@@ -25,6 +25,7 @@ import Icons from 'react-native-vector-icons/FontAwesome5';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Ant from 'react-native-vector-icons/AntDesign';
 import MatCom from 'react-native-vector-icons/MaterialCommunityIcons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
@@ -34,7 +35,7 @@ const BottomTabNavigator = () => {
       tabBarOptions={{
         activeTintColor: '#06A3EF',
         inactiveTintColor: '#515152A5',
-        barstyle : styles.container
+        barstyle: styles.container,
       }}>
       <Tab.Screen
         name="Home"
@@ -68,8 +69,8 @@ const BottomTabNavigator = () => {
         name="Wallet"
         options={{
           tabBarIcon: ({focused, color, size}) => (
-            <Fontisto
-              name="wallet"
+            <MatCom
+              name={focused ? 'wallet-outline' : 'wallet-outline'}
               size={20}
               color={color}
               focused={focused}
@@ -78,35 +79,43 @@ const BottomTabNavigator = () => {
         }}
         component={WalletStackNavigator}
       />
-      <Tab.Screen name="Subscriptions" options={{
+      <Tab.Screen
+        name="Subscriptions"
+        options={{
           tabBarIcon: ({focused, color, size}) => (
-            <MatCom
-              name={focused ? 'youtube-subscription' : 'youtube-subscription'}
+            <MatIcon
+              name={focused ? 'list-alt' : 'list-alt'}
               size={20}
               color={color}
               focused={focused}
             />
           ),
-        }}  component={SubscriptionStackNavigator} />
-      <Tab.Screen name="Support" options={{
+        }}
+        component={SubscriptionStackNavigator}
+      />
+      <Tab.Screen
+        name="Support"
+        options={{
           tabBarIcon: ({focused, color, size}) => (
             <MatCom
-            name={focused ? 'headphones' : 'headphones'}
-            size={20}
-            color={color}
-            focused={focused}
-          />
+              name={focused ? 'headphones' : 'headphones'}
+              size={20}
+              color={color}
+              focused={focused}
+            />
           ),
-        }} component={SupportStackNavigator} />
+        }}
+        component={SupportStackNavigator}
+      />
     </Tab.Navigator>
   );
 };
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     borderTopLeftRadius: 25,
-    borderTopRightRadius: 25
-  }
+    borderTopRightRadius: 25,
+  },
 });
 
 export default BottomTabNavigator;

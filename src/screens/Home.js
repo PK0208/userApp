@@ -77,9 +77,9 @@ const Home = (props) => {
         <View style={styles.formContent}>
           <View style={styles.inputContainer}>
             {/* <Image
-            style={[styles.icon, styles.inputIcon]}
-            source={{uri: 'https://png.icons8.com/search/androidL/100/000000'}}
-          /> */}
+          style={[styles.icon, styles.inputIcon]}
+          source={{uri: 'https://png.icons8.com/search/androidL/100/000000'}}
+        /> */}
             <Icon
               name="search1"
               color="black"
@@ -106,7 +106,8 @@ const Home = (props) => {
             resizeMode="cover"
           />
         </View>
-        <View style={{justifyContent: 'center', alignItems: 'center'}}>
+        <View
+          style={{justifyContent: 'center', alignItems: 'center', margin: 5}}>
           <Text style={{color: '#4B4A4A', fontSize: 20, fontWeight: 'bold'}}>
             Flash Sale
           </Text>
@@ -175,40 +176,29 @@ const Home = (props) => {
                   style={{color: '#525253', fontSize: 14, fontWeight: 'bold'}}>
                   Rs 500
                 </Text>
-
-                {/* <View style={{ flexDirection: 'column', marginVertical: '20%',marginLeft: -20}}>
-<Text style={{color: '#525253', fontSize: 14, fontWeight: 'bold',}}>Rs 500</Text>
-</View> */}
-              </View>
-
-              <View style={{flexDirection: 'column'}}>
-                <Text
-                  style={{
-                    color: '#525253',
-                    fontSize: 20,
-                    fontWeight: '200',
-                    //marginHorizontal: 10,
-                  }}>
-                  2
-                </Text>
               </View>
             </View>
           </Card>
         </View>
-        <View style={{flexDirection: 'row'}}>
-          <View style={{justifyContent: 'flex-start', marginLeft: 15}}>
+        <View>
+          <View style={{flexDirection: 'row', marginLeft: 15}}>
             <Text style={{color: '#4B4A4A', fontWeight: 'bold', fontSize: 20}}>
               Categories
             </Text>
+
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('AllCategories')}>
+              <Text
+                style={{
+                  color: '#7373E0',
+                  justifyContent: 'flex-end',
+                  marginLeft: '65%',
+                  marginTop: 5,
+                }}>
+                See all
+              </Text>
+            </TouchableOpacity>
           </View>
-          {/* <View
-            style={{
-              justifyContent: 'flex-end',
-              alignItems: 'flex-end',
-              alignSelf: 'flex-end',
-            }}>
-            <Text style={{color: '#7373E0'}}>See all</Text>
-          </View> */}
         </View>
         <View
           style={{
@@ -299,7 +289,7 @@ const Home = (props) => {
 const styles = StyleSheet.create({
   formContent: {
     flexDirection: 'row',
-    marginTop: 20,
+    margin: 15,
   },
   inputContainer: {
     borderBottomColor: '#F5FCFF',
