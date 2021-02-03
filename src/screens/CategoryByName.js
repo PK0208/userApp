@@ -83,7 +83,7 @@ const homePageData = [
   {
     name: 'Ayurveda',
     image:
-      'https://lh3.googleusercontent.com/ShLrOxqWgew_dPWFCuGHDO5w3H8iBsUTAbtJ5uxTL7g1RpNNvj0Jrs0i5_0ZFeih7dtQT4o=s128',
+      'https://lh3.googleusercontent.com/QE9321hT2oxBdCGBahzo9wkY8aGDu0eLquTlvtxfwh3u_qt8ziYOTAiUHXTTDlQ_hgvAfA=s85',
   },
   {
     name: 'Other organic',
@@ -92,94 +92,143 @@ const homePageData = [
   },
 ];
 
-const AllCategories = (props) => {
+const count = 3;
+const flex_height = height / count;
+
+const CategoryByName = (props) => {
   const isFocused = useIsFocused();
 
-  useEffect(() => {}, [props, isFocused]);
+  useEffect(() => {
+    console.log('Use Effect Category By Name');
+    console.log(
+      'Use Effect Category By Name props',
+      props.route.params.product_name,
+      props.route.params.product_image,
+    );
+  }, [props, isFocused]);
 
   return (
-    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
+    <View style={styles.container}>
       <Appbar navigation={props.navigation} />
-      {/* <ImageSlider /> */}
-      <ScrollView>
-        <View style={styles.formContent}>
-          <View style={styles.inputContainer}>
-            {/* <Image
-            style={[styles.icon, styles.inputIcon]}
-            source={{uri: 'https://png.icons8.com/search/androidL/100/000000'}}
-          /> */}
+      <View style={[styles.box, styles.box1]}>
+        <Image
+          style={styles.imageContainer}
+          source={{
+            uri: props.route.params.product_image,
+          }}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={[styles.box2]}>
+        <View style={{flexDirection: 'row', marginLeft: 15, margin: 5}}>
+          <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+            {props.route.params.product_name}
+          </Text>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: 'bold',
+              marginTop: 15,
+              marginLeft: '70%',
+            }}>
+            700.0
+          </Text>
+        </View>
+
+        <View style={{flexDirection: 'column'}}>
+          <View style={{flexDirection: 'row', marginLeft: 15, margin: 5}}>
             <Icon
-              name="search1"
-              color="black"
-              size={25}
-              style={{marginHorizontal: 15}}
-              //onPress={() => props.navigation.navigate('Home')}
+              name="plus"
+              color="#303843"
+              size={18}
+              //style={{marginHorizontal: 15}}
+              onPress={() => console.log('Plus Icon Pressed')}
             />
-            <TextInput
-              style={styles.inputs}
-              //ref={'txtSearch'}
-              placeholder="Search"
-              underlineColorAndroid="transparent"
-              //onChangeText={(name_address) => this.setState({name_address})}
+            <Text
+              style={{
+                color: '#525253',
+                fontSize: 13,
+                fontWeight: '200',
+                marginHorizontal: 10,
+              }}>
+              2
+            </Text>
+
+            <Icon
+              name="minus"
+              color="#303843"
+              size={18}
+              //style={{marginHorizontal: 15}}
+              onPress={() => console.log('Minus Icon Pressed')}
             />
           </View>
         </View>
 
-        <View>
-          <View style={{flexDirection: 'row', marginLeft: 15}}>
-            <Text style={{color: '#4B4A4A', fontWeight: 'bold', fontSize: 20}}>
-              Categories
-            </Text>
-          </View>
+        <View style={{flexDirection: 'row', marginLeft: 15, margin: 5}}>
+          <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+            Product Details
+          </Text>
+        </View>
+        <View style={{margin: 5, marginLeft: 15}}>
+          <Text style={{fontSize: 16, color: '#000000'}} numberOfLines={5}>
+            Pure & fresh khoya - Free from adulteration!! Rich in calcium
+            strengthnig the bones and teeth presence of riboflavin Pure & fresh
+            khoya - Free from adulteration!! Rich in calcium strengthnig the
+            bones and teeth presence of riboflavin
+          </Text>
         </View>
 
         <View
           style={{
-            flexDirection: 'row',
-            marginHorizontal: 10,
-            marginVertical: 10,
-            alignItems: 'center',
             justifyContent: 'center',
-            alignContent: 'center',
-            flexWrap: 'wrap',
+            alignItems: 'center',
+            alignSelf: 'center',
+            borderWidth: 1,
+            width: width * 0.39733333333,
+            //height: height * 0.03956834532,
+            margin: 10,
+            borderRadius: 25,
+            backgroundColor: '#4FDD5F',
+            borderColor: '#4FDD5F',
+            marginBottom: 10,
           }}>
-          {homePageData.map((item) => {
-            return (
-              <View
-                style={{
-                  flexDirection: 'column',
-                  //marginHorizontal: 10,
-                }}>
-                <TouchableOpacity
-                  onPress={() =>
-                    props.navigation.navigate('CategoryByName', {
-                      product_name: item.name,
-                      product_image: item.image,
-                    })
-                  }>
-                  <Card style={styles.cardContainer}>
-                    <Image
-                      style={styles.imageContainer}
-                      source={{
-                        uri: item.image,
-                      }}
-                      resizeMode="contain"
-                    />
-                  </Card>
-                  <Text style={{alignSelf: 'center', color: '#525253'}}>
-                    {item.name}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            );
-          })}
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: 'bold',
+              margin: 10,
+              color: '#FFFFFF',
+            }}>
+            Add to cart
+          </Text>
         </View>
-      </ScrollView>
+      </View>
+      {/* <View style={[styles.box, styles.box3]}></View> */}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  box: {
+    height: flex_height,
+    //flexDirection: 'row',
+  },
+  box1: {
+    backgroundColor: '#FFFFFF',
+  },
+  box2: {
+    backgroundColor: '#FFFFFF',
+    borderBottomLeftRadius: 35,
+    borderBottomRightRadius: 35,
+    //margin: 20,
+  },
+  box3: {
+    backgroundColor: '#F7F7F7',
+  },
   formContent: {
     flexDirection: 'row',
     margin: 15,
@@ -217,9 +266,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#9AD9F7',
   },
   imageContainer: {
-    width: 60,
-    height: 60,
-    margin: 10,
+    /* width: '100%',
+    height: '80%', */
+    //marginTop: 20,
+    width: '100%',
+    height: '80%',
   },
 });
-export default AllCategories;
+export default CategoryByName;

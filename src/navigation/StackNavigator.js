@@ -14,6 +14,7 @@ import Subscriptions from '../screens/Calender/Subscriptions';
 import Wallet from '../screens/Wallet/Wallet';
 import Support from '../screens/Support/Support';
 import AllCategories from '../screens/AllCategories';
+import CategoryByName from '../screens/CategoryByName';
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,7 @@ const MainStackNavigator = ({navigation, route}) => {
       <Stack.Screen name="Billing" component={Billing} />
       <Stack.Screen name="Contact" component={Contact} />
       <Stack.Screen name="About" component={About} />
+      <Stack.Screen name="CategoryByName" component={CategoryByName} />
       <Stack.Screen name="AllCategories" component={AllCategories} />
       <Stack.Screen name="Logout" component={Home} />
     </Stack.Navigator>
@@ -51,6 +53,7 @@ const CalenderStackNavigator = ({navigation, route}) => {
       <Stack.Screen name="Calender" component={Calender} />
       <Stack.Screen name="Orders" component={Orders} />
       <Stack.Screen name="Subscriptions" component={Subscriptions} />
+      <Stack.Screen name="CategoryByName" component={CategoryByName} />
     </Stack.Navigator>
   );
 };
