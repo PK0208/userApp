@@ -40,11 +40,47 @@ const CartScreen = (props) => {
   const isFocused = useIsFocused();
   const [total, setTotal] = useState([]);
   const [totalAmout, setTotalAmount] = useState([]);
+  const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     console.log('Use Effect Cart Screen');
 
     totalAmount();
   }, [props, isFocused]);
+
+  const increaseQuantity = () => {
+    let tempValue = parseInt(quantity);
+    //let tempAmount = parseFloat(total);
+    tempValue++;
+    //tempAmount = price * tempValue;
+    /* setTotal(tempAmount);
+    setTempState(1);
+    setQuantity(tempValue); */
+    console.log('Increase', tempValue);
+    setQuantity(tempValue);
+    console.log('Increase quantity', quantity);
+  };
+  const decreaseQuantity = () => {
+    let tempValue = parseInt(quantity);
+    if (tempValue > 1) {
+      tempValue--;
+    } else {
+      tempValue = 1;
+    }
+
+    console.log('decrease', tempValue);
+    setQuantity(tempValue);
+    console.log('decrease quantity', quantity);
+    /* let tempAmount = parseFloat(total);
+    if (tempValue <= parseInt(min)) {
+      tempValue = parseFloat(min);
+    } else {
+      tempValue--;
+    }
+    setTempState(1);
+    tempAmount = price * tempValue;
+    setTotal(tempAmount);
+    setQuantity(tempValue); */
+  };
 
   const totalAmount = async () => {
     {
@@ -319,6 +355,33 @@ const CartScreen = (props) => {
             </Text>
           </View>
         </View>
+
+        <TouchableOpacity onPress={() => console.log('Place Order Clicked')}>
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignSelf: 'center',
+              borderWidth: 1,
+              width: width * 0.39733333333,
+              //height: height * 0.03956834532,
+              margin: 10,
+              borderRadius: 25,
+              backgroundColor: '#4FDD5F',
+              borderColor: '#4FDD5F',
+              marginBottom: 10,
+            }}>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: 'bold',
+                margin: 10,
+                color: '#FFFFFF',
+              }}>
+              Place Order
+            </Text>
+          </View>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
