@@ -66,8 +66,44 @@ const newArrivalsData = [
 ];
 const Home = (props) => {
   const isFocused = useIsFocused();
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {}, [props, isFocused]);
+
+  const increaseQuantity = () => {
+    let tempValue = parseInt(quantity);
+    //let tempAmount = parseFloat(total);
+    tempValue++;
+    //tempAmount = price * tempValue;
+    /* setTotal(tempAmount);
+    setTempState(1);
+    setQuantity(tempValue); */
+    console.log('Increase', tempValue);
+    setQuantity(tempValue);
+    console.log('Increase quantity', quantity);
+  };
+  const decreaseQuantity = () => {
+    let tempValue = parseInt(quantity);
+    if (tempValue > 1) {
+      tempValue--;
+    } else {
+      tempValue = 1;
+    }
+
+    console.log('decrease', tempValue);
+    setQuantity(tempValue);
+    console.log('decrease quantity', quantity);
+    /* let tempAmount = parseFloat(total);
+    if (tempValue <= parseInt(min)) {
+      tempValue = parseFloat(min);
+    } else {
+      tempValue--;
+    }
+    setTempState(1);
+    tempAmount = price * tempValue;
+    setTotal(tempAmount);
+    setQuantity(tempValue); */
+  };
 
   return (
     <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
@@ -144,7 +180,7 @@ const Home = (props) => {
                     color="#303843"
                     size={18}
                     //style={{marginHorizontal: 15}}
-                    onPress={() => console.log('Plus Icon Pressed')}
+                    onPress={() => increaseQuantity()}
                   />
                   <Text
                     style={{
@@ -153,7 +189,7 @@ const Home = (props) => {
                       fontWeight: '200',
                       marginHorizontal: 10,
                     }}>
-                    2
+                    {quantity}
                   </Text>
 
                   <Icon
@@ -161,7 +197,7 @@ const Home = (props) => {
                     color="#303843"
                     size={18}
                     //style={{marginHorizontal: 15}}
-                    onPress={() => console.log('Minus Icon Pressed')}
+                    onPress={() => decreaseQuantity()}
                   />
                 </View>
                 <View>
