@@ -178,30 +178,33 @@ const CategoryByName = (props) => {
           </Text>
         </View>
 
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            alignSelf: 'center',
-            borderWidth: 1,
-            width: width * 0.39733333333,
-            //height: height * 0.03956834532,
-            margin: 10,
-            borderRadius: 25,
-            backgroundColor: '#4FDD5F',
-            borderColor: '#4FDD5F',
-            marginBottom: 10,
-          }}>
-          <Text
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate('CartScreen')}>
+          <View
             style={{
-              fontSize: 18,
-              fontWeight: 'bold',
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignSelf: 'center',
+              borderWidth: 1,
+              width: width * 0.39733333333,
+              //height: height * 0.03956834532,
               margin: 10,
-              color: '#FFFFFF',
+              borderRadius: 25,
+              backgroundColor: '#4FDD5F',
+              borderColor: '#4FDD5F',
+              marginBottom: 10,
             }}>
-            Add to cart
-          </Text>
-        </View>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: 'bold',
+                margin: 10,
+                color: '#FFFFFF',
+              }}>
+              Add to cart
+            </Text>
+          </View>
+        </TouchableOpacity>
       </View>
       {/* <View style={[styles.box, styles.box3]}></View> */}
     </View>
