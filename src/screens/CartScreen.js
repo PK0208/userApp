@@ -27,7 +27,7 @@ const cartData = [
 
   {
     name: 'A2 Gir cow khoya (one KG) 1000gm',
-    price: 700,
+    price: 1000,
   },
 
   {
@@ -36,12 +36,42 @@ const cartData = [
   },
 ];
 
-const Home = (props) => {
+const CartScreen = (props) => {
   const isFocused = useIsFocused();
-
+  const [total, setTotal] = useState([]);
+  const [totalAmout, setTotalAmount] = useState([]);
   useEffect(() => {
     console.log('Use Effect Cart Screen');
+
+    totalAmount();
   }, [props, isFocused]);
+
+  const totalAmount = async () => {
+    {
+      cartData.map((item) => {
+        console.log('totalAmount', item.price);
+        let arr = total;
+        arr.push(item.price);
+        setTotal(arr);
+        console.log('totalAmount Arr', total);
+        const reducer = (accumulator, currentValue) =>
+          accumulator + currentValue;
+
+        total.reduce(reducer);
+
+        console.log('ToTal', total.reduce(reducer));
+
+        let totalAmt = total.reduce(reducer);
+        setTotalAmount(totalAmt);
+
+        /* const reducer = (accumulator, currentValue) =>
+          accumulator + currentValue;
+        console.log('ToTal', item.price.reduce(reducer)); */
+
+        setTotal([]);
+      });
+    }
+  };
 
   return (
     <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
@@ -60,7 +90,7 @@ const Home = (props) => {
           </Text>
         </View>
 
-        {cartData.map((item) => {
+        {/* {cartData.map((item) => {
           return (
             <View
               style={{
@@ -131,6 +161,74 @@ const Home = (props) => {
               </View>
             </View>
           );
+        })} */}
+
+        {cartData.map((item) => {
+          return (
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignSelf: 'stretch',
+                alignItems: 'stretch',
+                borderWidth: 1,
+                margin: 10,
+                backgroundColor: '#FFFFFF',
+                borderColor: '#FFFFFF',
+                borderRadius: 10,
+              }}>
+              <View style={{flexDirection: 'column', margin: 10}}>
+                <Text
+                  style={{
+                    color: '#525253',
+                    fontSize: 14,
+                    fontWeight: 'bold',
+                  }}
+                  numberOfLines={1}>
+                  {item.name}
+                </Text>
+              </View>
+
+              <View style={{flexDirection: 'column', margin: 10}}>
+                <View style={{flexDirection: 'row'}}>
+                  <Icon
+                    name="plus"
+                    color="#303843"
+                    size={18}
+                    //style={{marginHorizontal: 15}}
+                    onPress={() => console.log('Plus Icon Pressed')}
+                  />
+                  <Text
+                    style={{
+                      color: '#525253',
+                      fontSize: 13,
+                      fontWeight: '200',
+                      marginHorizontal: 5,
+                    }}>
+                    2
+                  </Text>
+
+                  <Icon
+                    name="minus"
+                    color="#303843"
+                    size={18}
+                    //style={{marginHorizontal: 15}}
+                    onPress={() => console.log('Minus Icon Pressed')}
+                  />
+                </View>
+
+                <Text
+                  style={{
+                    color: '#525253',
+                    fontSize: 14,
+                    fontWeight: 'bold',
+                  }}
+                  numberOfLines={1}>
+                  Rs {item.price}
+                </Text>
+              </View>
+            </View>
+          );
         })}
 
         <View
@@ -145,54 +243,80 @@ const Home = (props) => {
             borderColor: '#FFFFFF',
             borderRadius: 10,
           }}>
-          <Text
-            style={{
-              color: '#525253',
-              fontSize: 14,
-              margin: 5,
-              fontWeight: 'bold',
-            }}
-            numberOfLines={2}>
-            A2 Gir cow khoya (one KG) 1000gm
-          </Text>
-          <View style={{flexDirection: 'row', marginLeft: 15, margin: 5}}>
-            <View style={{flexDirection: 'column'}}>
-              <View style={{flexDirection: 'row'}}>
-                <Icon
-                  name="plus"
-                  color="#303843"
-                  size={18}
-                  //style={{marginHorizontal: 15}}
-                  onPress={() => console.log('Plus Icon Pressed')}
-                />
-                <Text
-                  style={{
-                    color: '#525253',
-                    fontSize: 13,
-                    fontWeight: '200',
-                    marginHorizontal: 5,
-                  }}>
-                  2
-                </Text>
+          <View style={{flexDirection: 'column', margin: 5}}>
+            <Text
+              style={{
+                color: '#525253',
+                fontSize: 14,
+                fontWeight: 'bold',
+              }}
+              numberOfLines={1}>
+              Subtotal
+            </Text>
+            <Text
+              style={{
+                color: '#525253',
+                fontSize: 14,
+                fontWeight: 'bold',
+              }}
+              numberOfLines={1}>
+              Delivery charge
+            </Text>
 
-                <Icon
-                  name="minus"
-                  color="#303843"
-                  size={18}
-                  //style={{marginHorizontal: 15}}
-                  onPress={() => console.log('Minus Icon Pressed')}
-                />
-              </View>
+            <View
+              style={{
+                flexDirection: 'column',
+                borderTopWidth: 2,
+                borderColor: '#8B8C8D',
+                width: '370%',
+                margin: 5,
+                marginLeft: -5,
+              }}>
               <Text
                 style={{
-                  color: '#000000',
-                  fontSize: 13,
+                  color: '#525253',
+                  fontSize: 14,
                   fontWeight: 'bold',
-                  marginTop: 5,
-                }}>
-                RS 700.0
+                  margin: 5,
+                }}
+                numberOfLines={1}>
+                Total
               </Text>
             </View>
+          </View>
+
+          <View style={{flexDirection: 'column', margin: 5}}>
+            <Text
+              style={{
+                color: '#525253',
+                fontSize: 14,
+                fontWeight: 'bold',
+              }}
+              numberOfLines={1}>
+              Rs {totalAmout}
+            </Text>
+
+            <Text
+              style={{
+                color: '#525253',
+                fontSize: 14,
+                fontWeight: 'bold',
+              }}
+              numberOfLines={1}>
+              00
+            </Text>
+
+            <Text
+              style={{
+                color: '#525253',
+                fontSize: 14,
+                fontWeight: 'bold',
+                margin: 5,
+                marginTop: 10,
+              }}
+              numberOfLines={1}>
+              Rs {totalAmout}
+            </Text>
           </View>
         </View>
       </ScrollView>
@@ -243,4 +367,4 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 });
-export default Home;
+export default CartScreen;
