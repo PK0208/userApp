@@ -1,6 +1,6 @@
 import React from 'react';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Dimensions} from 'react-native';
 import {useSelector} from 'react-redux';
 import AntIcon from 'react-native-vector-icons/MaterialIcons';
 import Material from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -29,6 +29,8 @@ const routes = [
     route: 'Logout',
   },
 ];
+
+const {height, width} = Dimensions.get('window');
 const DrawerContent = (props) => {
   const name = useSelector((state) => state.login.userName);
 
@@ -85,7 +87,7 @@ const DrawerContent = (props) => {
             </Text> */}
           </View>
           <View>
-            {routes.map((route) => {
+            {/* {routes.map((route) => {
               return (
                 <View
                   style={{
@@ -100,15 +102,47 @@ const DrawerContent = (props) => {
                   <TouchableOpacity
                     onPress={() => props.navigation.navigate(route.route)}>
                     <Text style={{margin: 5}}>{route.name}</Text>
-
-                    {/* <Ant name="right" size={25} /> */}
-                  </TouchableOpacity>
-
-                  {/* name="left"
-        color="white"
-        size={25}
-        onPress={() => props.navigation.goBack()} */}
+                  </TouchableOpacity>                 
                 </View>
+              );
+            })} */}
+
+            {routes.map((item) => {
+              return (
+                <TouchableOpacity
+                  onPress={() => props.navigation.navigate(item.route)}>
+                  <View
+                    style={{
+                      borderWidth: 1,
+                      borderRadius: 25,
+                      borderColor: '#707070',
+                      backgroundColor: '#FFFFFF',
+                      flexDirection: 'row',
+                      //width: '80%',
+                      margin: 5,
+                      width: width * 0.5413333333,
+                    }}>
+                    <View
+                      style={{
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        width: width * 0.49018666666,
+                      }}>
+                      <Text style={{margin: 10}} ellipsizeMode="tail">
+                        {item.name}
+                      </Text>
+                    </View>
+
+                    <View style={{flexDirection: 'row-reverse'}}>
+                      <Ant
+                        name="right"
+                        color="#000000"
+                        size={20}
+                        style={{marginTop: 10}}
+                      />
+                    </View>
+                  </View>
+                </TouchableOpacity>
               );
             })}
           </View>
