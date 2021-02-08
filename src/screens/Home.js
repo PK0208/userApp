@@ -22,8 +22,8 @@ const {height, width} = Dimensions.get('window');
 const homePageData = [
   {
     name: 'A2 Milk',
-    image:
-      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
+    /*  image:
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png', */
   },
 
   {
@@ -163,10 +163,11 @@ const Home = (props) => {
               }}>
               <Image
                 style={{width: '20%', height: 50}}
-                source={{
+                /* source={{
                   uri:
                     'https://lh3.googleusercontent.com/aJgssuF_wB5wRpHTulaHUEKG0cdcTIbIMsJRmWmzeMHFjW0hm5TULjFIdHAOx12ulH_kdw=s80',
-                }}
+                }} */
+                source={require('../assets/images/new_ghee.jpg')}
                 resizeMode="contain"
               />
 
@@ -236,7 +237,7 @@ const Home = (props) => {
             </TouchableOpacity>
           </View>
         </View>
-        <View
+        {/* <View
           style={{
             flexDirection: 'row',
             marginHorizontal: 10,
@@ -262,7 +263,6 @@ const Home = (props) => {
                       }}
                       resizeMode="contain"
                     />
-                    {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
                   </Card>
                   <Text style={{alignSelf: 'center', color: '#525253'}}>
                     {item.name}
@@ -271,7 +271,145 @@ const Home = (props) => {
               </View>
             );
           })}
+        </View> */}
+
+        {/* producsts list starts */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            marginHorizontal: 10,
+            marginVertical: 10,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignContent: 'center',
+            flexWrap: 'wrap',
+          }}>
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity onPress={() => console.log('Print Out')}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={{
+                    uri:
+                      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
+                  }}
+                  resizeMode="contain"
+                />
+                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                A2 Milk
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity onPress={() => console.log('Print Out')}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/oil_ghee.jpg')}
+                  resizeMode="contain"
+                />
+                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Oil & Ghee
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity onPress={() => console.log('Print Out')}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_butter.jpg')}
+                  resizeMode="contain"
+                />
+                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Butter
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity onPress={() => console.log('Print Out')}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_panner.jpg')}
+                  resizeMode="contain"
+                />
+                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Panner
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity onPress={() => console.log('Print Out')}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_dryfruits.jpg')}
+                  resizeMode="contain"
+                />
+                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Dry Fruits
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity onPress={() => console.log('Print Out')}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/leaf_vegetables.jpg')}
+                  resizeMode="contain"
+                />
+                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Vegetables
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
+
+        {/*  products list ends*/}
 
         <View style={{flexDirection: 'row'}}>
           <View style={{justifyContent: 'flex-start', marginLeft: 15}}>
@@ -281,7 +419,7 @@ const Home = (props) => {
           </View>
         </View>
 
-        <View
+        {/* <View
           style={{
             flexDirection: 'row',
             marginHorizontal: 25,
@@ -307,7 +445,6 @@ const Home = (props) => {
                       }}
                       resizeMode="contain"
                     />
-                    {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
                   </Card>
                   <Text style={{alignSelf: 'center', color: '#525253'}}>
                     {item.name}
@@ -316,7 +453,61 @@ const Home = (props) => {
               </View>
             );
           })}
+        </View> */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            marginHorizontal: 25,
+            marginVertical: 10,
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            alignContent: 'center',
+            flexWrap: 'wrap',
+          }}>
+          {newArrivalsData.map((item) => {
+            return (
+              <View
+                style={{
+                  flexDirection: 'column',
+                  //marginHorizontal: 10,
+                }}>
+                <TouchableOpacity onPress={() => console.log('Print Out')}>
+                  <Card style={styles.cardContainer}>
+                    <Image
+                      style={styles.imageContainer}
+                      source={require('../assets/images/new_poojaitems.jpg')}
+                      resizeMode="contain"
+                    />
+                    {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
+                  </Card>
+                  <Text style={{alignSelf: 'center', color: '#525253'}}>
+                    Pooja Items
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            );
+          })}
         </View>
+
+        {/* <View
+          style={{
+            flexDirection: 'column',
+            //marginHorizontal: 10,
+            width: width * 0.288,
+          }}>
+          <TouchableOpacity onPress={() => console.log('Print Out')}>
+            <Card style={styles.cardContainer}>
+              <Image
+                style={styles.imageContainer}
+                //source={require('../assets/images/leaf_vegetables.jpg')}
+                source={require('../assets/images/new_no_transactions.png')}
+                resizeMode="contain"
+              />
+            </Card>
+            <Text style={{alignSelf: 'center', color: '#525253'}}>example</Text>
+          </TouchableOpacity>
+        </View> */}
       </ScrollView>
     </View>
   );
