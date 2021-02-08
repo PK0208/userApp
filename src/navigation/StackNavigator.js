@@ -16,6 +16,8 @@ import Support from '../screens/Support/Support';
 import AllCategories from '../screens/AllCategories';
 import CategoryByName from '../screens/CategoryByName';
 import CartScreen from '../screens/CartScreen';
+import Notifications from '../screens/Notifications';
+import Profile from '../screens/Profile';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +43,7 @@ const MainStackNavigator = ({navigation, route}) => {
       <Stack.Screen name="CategoryByName" component={CategoryByName} />
       <Stack.Screen name="AllCategories" component={AllCategories} />
       <Stack.Screen name="CartScreen" component={CartScreen} />
+      <Stack.Screen name="Notifications" component={Notifications} />
       <Stack.Screen name="Logout" component={Home} />
     </Stack.Navigator>
   );

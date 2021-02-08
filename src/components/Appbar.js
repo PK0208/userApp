@@ -17,9 +17,7 @@ export default function Appbar(props) {
   const onPress = () => props.navigation.openDrawer();
   const isFocused = useIsFocused();
   const [count, setCount] = useState(0);
-  useEffect(() => {
-    
-  }, [props, isFocused]);
+  useEffect(() => {}, [props, isFocused]);
   return (
     <View style={styles.appBarContainer}>
       <TouchableOpacity onPress={onPress}>
@@ -32,13 +30,13 @@ export default function Appbar(props) {
         name="notifications"
         color="white"
         size={25}
-        onPress={() => console.log('Cart Icon Pressed')}
+        onPress={() => props.navigation.navigate('Notifications')}
       />
       <Icon
         name="cart-outline"
         color="white"
         size={25}
-        onPress={() => console.log('Cart Icon Pressed')}
+        onPress={() => props.navigation.navigate('CartScreen')}
       />
       {/* <Badge
         size={25}

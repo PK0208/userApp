@@ -137,7 +137,7 @@ const Home = (props) => {
             style={{width: '100%', height: 130}}
             source={{
               uri:
-                'https://lh3.googleusercontent.com/Wr4LBp331SXqBElr_BHJEhVsgO5Ix7vxCLZ1ejFQJxt8BVApn3igdydwFe8liZCHZ4T8=s162',
+                'https://lh3.googleusercontent.com/nchOYzxdkZdBOK7nym2S0rjsmLeysJ7FIQOy51lLX15XgSMYP4-HR2aMY_gfurmWwMkh=s170',
             }}
             resizeMode="cover"
           />

@@ -15,52 +15,119 @@ import axios from 'axios';
 import {Card, CardItem, Body} from 'native-base';
 
 const {height, width} = Dimensions.get('window');
+import Ant from 'react-native-vector-icons/AntDesign';
+
+const otherIssues = [
+  {
+    name: 'Issue with previous order',
+  },
+  {
+    name: 'Recharge or Tech related issues',
+  },
+  {
+    name: 'Start services to your building',
+  },
+  {
+    name: 'Getting started',
+  },
+];
+
+const generalQueries = [
+  {
+    name: 'Till what time can you place the order Everyday',
+  },
+  {
+    name: 'When will the order be delivered',
+  },
+];
+
 const Support = (props) => {
   const isFocused = useIsFocused();
-  
-  useEffect(() => {
-    
-  }, [props, isFocused]);
 
-  
+  useEffect(() => {}, [props, isFocused]);
 
   return (
-    <View style={{height:'100%'}}>
+    <View style={{height: '100%'}}>
       <Appbar navigation={props.navigation} />
-      
-      <View>
-        <Text style= {{marginLeft: 20, marginTop: 5}}>Get help with Other issues</Text>
 
-        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
-          <Text>Issue with previous order</Text>
-        </View>
-
-        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
-          <Text>Recharge or Tech related issues</Text>
-        </View>
-
-        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
-          <Text>Start services to your building</Text>
-        </View>
-
-
-        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
-          <Text>Getting started</Text>
-        </View>
-
-        <Text>Button FAQ</Text>
-
-        <Text style= {{marginLeft: 20, marginTop: 5}}>General queries</Text>
-
-        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
-          <Text>Till what time can you place the order Everyday</Text>
-        </View>
-
-        <View style= {{margin: 20, borderWidth: 1, borderColor: '#707070', borderRadius: 15, padding: 5}}>
-          <Text>When will the order be delivered</Text>
-        </View>
+      <View style={{alignItems: 'center', justifyContent: 'center'}}>
+        {otherIssues.map((item) => {
+          return (
+            <View
+              style={{
+                borderWidth: 1,
+                borderRadius: 25,
+                borderColor: '#707070',
+                backgroundColor: '#FFFFFF',
+                flexDirection: 'row',
+                width: '80%',
+                margin: 5,
+              }}>
+              <Text style={{margin: 10}}>{item.name}</Text>
+              <Ant
+                name="right"
+                color="#000000"
+                size={20}
+                style={{marginTop: 10}}
+              />
+            </View>
+          );
+        })}
       </View>
-     
+
+      <TouchableOpacity onPress={() => console.log('Add Money Clicked')}>
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            alignSelf: 'center',
+            borderWidth: 1,
+            width: width * 0.39733333333,
+            //height: height * 0.03956834532,
+            margin: 10,
+            borderRadius: 25,
+            backgroundColor: '#97D5F3',
+            borderColor: '#97D5F3',
+            marginBottom: 10,
+          }}>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: 'bold',
+              margin: 10,
+              color: '#FFFFFF',
+            }}>
+            FAQs
+          </Text>
+        </View>
+      </TouchableOpacity>
+
+      <View style={{alignItems: 'center', justifyContent: 'center'}}>
+        {generalQueries.map((item) => {
+          return (
+            <View
+              style={{
+                borderWidth: 1,
+                borderRadius: 25,
+                borderColor: '#707070',
+                backgroundColor: '#FFFFFF',
+                flexDirection: 'row',
+                width: '80%',
+                margin: 5,
+              }}>
+              <Text style={{margin: 10}} numberOfLines={2}>
+                {item.name}
+              </Text>
+              {/* <Ant
+                name="right"
+                color="#000000"
+                size={20}
+                style={{marginTop: 10, marginLeft: -10}}
+              /> */}
+            </View>
+          );
+        })}
+      </View>
     </View>
   );
 };

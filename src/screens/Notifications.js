@@ -15,7 +15,7 @@ import axios from 'axios';
 import {Card, CardItem, Body} from 'native-base';
 
 const {height, width} = Dimensions.get('window');
-const BillingHistory = (props) => {
+const Notifications = (props) => {
   const isFocused = useIsFocused();
 
   useEffect(() => {}, [props, isFocused]);
@@ -23,7 +23,6 @@ const BillingHistory = (props) => {
   return (
     <View style={{height: '100%'}}>
       <Appbar navigation={props.navigation} />
-      {/* <ImageSlider /> */}
       <View style={{alignItems: 'center', marginVertical: 7}}>
         <View style={{marginTop: '50%'}}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -31,7 +30,7 @@ const BillingHistory = (props) => {
               style={styles.imageContainer}
               source={{
                 uri:
-                  'https://lh3.googleusercontent.com/nF3WbSLdkPev3xIPG-7ytagmWru83JdzZ4hfqEba0gNZABX3y7A_0KiMC5Kv8ACYVDPy=s55',
+                  'https://lh3.googleusercontent.com/QN6sM2HbGIpzakDa3vjC4Qo7cudTiQbOJSVlQ0psCdCkoumPhJMzjTzRz8yjeEDkP-e5Kw=s93',
               }}
               resizeMode="contain"
             />
@@ -41,8 +40,11 @@ const BillingHistory = (props) => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text style={{fontSize: 18, fontWeight: 'bold'}}>
-              No Transaction
+            <Text style={{fontSize: 20, fontWeight: 'bold'}}>
+              Nothing in here right now !
+            </Text>
+            <Text style={{fontSize: 18, color: '#757575'}}>
+              We’ll let you know when we have
             </Text>
           </View>
         </View>
@@ -58,4 +60,4 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 });
-export default BillingHistory;
+export default Notifications;
