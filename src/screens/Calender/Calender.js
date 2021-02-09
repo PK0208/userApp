@@ -106,6 +106,12 @@ const Calender = (props) => {
             }}
             resizeMode="contain"
           />
+
+          {/* <Image
+            style={styles.imageContainer}
+            source={require('../assets/images/no_orders.jpg')}
+            resizeMode="contain"
+          /> */}
         </View>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <Text style={{fontSize: 18, fontWeight: 'bold'}}>

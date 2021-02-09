@@ -27,12 +27,18 @@ const BillingHistory = (props) => {
       <View style={{alignItems: 'center', marginVertical: 7}}>
         <View style={{marginTop: '50%'}}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image
+            {/* <Image
               style={styles.imageContainer}
               source={{
                 uri:
                   'https://lh3.googleusercontent.com/nF3WbSLdkPev3xIPG-7ytagmWru83JdzZ4hfqEba0gNZABX3y7A_0KiMC5Kv8ACYVDPy=s55',
               }}
+              resizeMode="contain"
+            /> */}
+
+            <Image
+              style={styles.imageContainer}
+              source={require('../assets/images/new_no_transactions.png')}
               resizeMode="contain"
             />
           </View>

@@ -254,8 +254,7 @@ const Home = (props) => {
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('DeliveryStatus')}>
+            <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -281,7 +280,9 @@ const Home = (props) => {
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity onPress={() => console.log('POS Printer')}>
+            <TouchableOpacity
+              onPress={() => console.log('POS Printer')}
+              activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -303,7 +304,9 @@ const Home = (props) => {
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity onPress={() => console.log('Print Out')}>
+            <TouchableOpacity
+              onPress={() => console.log('Print Out')}
+              activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -332,8 +335,7 @@ const Home = (props) => {
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('DeliveryStatus')}>
+            <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -354,7 +356,9 @@ const Home = (props) => {
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity onPress={() => console.log('POS Printer')}>
+            <TouchableOpacity
+              onPress={() => console.log('POS Printer')}
+              activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -373,7 +377,9 @@ const Home = (props) => {
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity onPress={() => console.log('Print Out')}>
+            <TouchableOpacity
+              onPress={() => console.log('Print Out')}
+              activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -396,7 +402,7 @@ const Home = (props) => {
           </View>
         </View>
 
-        <View
+        {/* <View
           style={{
             flexDirection: 'row',
             //marginHorizontal: 15,
@@ -410,6 +416,34 @@ const Home = (props) => {
               marginHorizontal: 30,
             }}>
             <TouchableOpacity onPress={() => console.log('Print Out')}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_poojaitems.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Pooja Items
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View> */}
+        <View
+          style={{
+            flexDirection: 'row',
+            //marginHorizontal: 15,
+            //marginVertical: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignSelf: 'center',
+          }}>
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}

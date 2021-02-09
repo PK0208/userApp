@@ -10,6 +10,7 @@ import {useSelector} from 'react-redux';
 import {useIsFocused} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 //import {Badge} from 'react-native-paper';
+import EntIcon from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
 import axios from 'axios';
 
@@ -22,7 +23,8 @@ export default function Appbar(props) {
   return (
     <View style={styles.appBarContainer}>
       <TouchableOpacity onPress={onPress}>
-        <Feather name="menu" color="white" size={20} />
+        {/* <Feather name="menu" color="white" size={20} /> */}
+        <EntIcon name="menu" color="white" size={20} />
       </TouchableOpacity>
       <View>
         <Text style={styles.titleText}>Ksheerdham</Text>

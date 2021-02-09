@@ -83,8 +83,10 @@ const BottomTabNavigator = () => {
         name="Subscriptions"
         options={{
           tabBarIcon: ({focused, color, size}) => (
-            <MatIcon
-              name={focused ? 'list-alt' : 'list-alt'}
+            <MatCom
+              name={
+                focused ? 'clipboard-list-outline' : 'clipboard-list-outline '
+              }
               size={20}
               color={color}
               focused={focused}

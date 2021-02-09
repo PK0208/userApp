@@ -69,12 +69,17 @@ const ContactUs = (props) => {
         </View>
         <View style={{marginTop: '30%'}}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image
+            {/* <Image
               style={styles.imageContainer}
               source={{
                 uri:
                   'https://lh3.googleusercontent.com/asvJspzqeJtLgc8B4KfeiWJXDuDqOv8eMW1JTiuLknuOPlJPfYqvlGmG2KH1T0CxgSFpcg=s70',
               }}
+              resizeMode="contain"
+            /> */}
+            <Image
+              style={styles.imageContainer}
+              source={require('../assets/images/new_contactus.jpg')}
               resizeMode="contain"
             />
           </View>

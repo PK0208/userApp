@@ -133,7 +133,7 @@ const AllCategories = (props) => {
           </View>
         </View>
 
-        <View
+        {/* <View
           style={{
             flexDirection: 'row',
             marginHorizontal: 10,
@@ -172,6 +172,39 @@ const AllCategories = (props) => {
                 </TouchableOpacity>
               </View>
             );
+          })}
+        </View> */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            //marginHorizontal: 15,
+            //marginVertical: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignSelf: 'center',
+          }}>
+          {homePageData.map((item) => {
+            <View
+              style={{
+                flexDirection: 'column',
+                //marginHorizontal: 10,
+              }}>
+              <TouchableOpacity activeOpacity={1}>
+                <Card style={styles.cardContainer}>
+                  <Image
+                    style={styles.imageContainer}
+                    source={{
+                      uri: item.image,
+                    }}
+                    resizeMode="contain"
+                  />
+                </Card>
+                <Text style={{alignSelf: 'center', color: '#525253'}}>
+                  {item.name}
+                </Text>
+              </TouchableOpacity>
+            </View>;
           })}
         </View>
       </ScrollView>

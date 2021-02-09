@@ -26,12 +26,18 @@ const Notifications = (props) => {
       <View style={{alignItems: 'center', marginVertical: 7}}>
         <View style={{marginTop: '50%'}}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image
+            {/* <Image
               style={styles.imageContainer}
               source={{
                 uri:
                   'https://lh3.googleusercontent.com/QN6sM2HbGIpzakDa3vjC4Qo7cudTiQbOJSVlQ0psCdCkoumPhJMzjTzRz8yjeEDkP-e5Kw=s93',
               }}
+              resizeMode="contain"
+            /> */}
+
+            <Image
+              style={styles.imageContainer}
+              source={require('../assets/images/new_no_notifications.png')}
               resizeMode="contain"
             />
           </View>
