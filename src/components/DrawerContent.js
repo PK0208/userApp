@@ -138,7 +138,7 @@ const DrawerContent = (props) => {
                         name="right"
                         color="#000000"
                         size={20}
-                        style={{marginTop: 10}}
+                        style={{marginTop: 10, marginRight: 8}}
                       />
                     </View>
                   </View>

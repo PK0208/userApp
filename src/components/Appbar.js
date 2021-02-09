@@ -12,6 +12,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 //import {Badge} from 'react-native-paper';
 import Feather from 'react-native-vector-icons/Feather';
 import axios from 'axios';
+
 export default function Appbar(props) {
   //const id = useSelector((state) => state.login.userId);
   const onPress = () => props.navigation.openDrawer();
@@ -21,7 +22,7 @@ export default function Appbar(props) {
   return (
     <View style={styles.appBarContainer}>
       <TouchableOpacity onPress={onPress}>
-        <Feather name="menu" color="white" size={25} />
+        <Feather name="menu" color="white" size={20} />
       </TouchableOpacity>
       <View>
         <Text style={styles.titleText}>Ksheerdham</Text>
@@ -29,13 +30,14 @@ export default function Appbar(props) {
       <Icon
         name="notifications"
         color="white"
-        size={25}
+        size={20}
+        style={{marginLeft: '20%'}}
         onPress={() => props.navigation.navigate('Notifications')}
       />
       <Icon
         name="cart-outline"
         color="white"
-        size={25}
+        size={20}
         onPress={() => props.navigation.navigate('CartScreen')}
       />
       {/* <Badge
@@ -64,9 +66,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderRadius: 35,
     marginTop: 5,
+    borderColor: 'transparent',
+    //opacity: 0.7,
   },
   titleText: {
     color: 'white',
     fontSize: width * 0.062801932367,
+    fontFamily: 'impact',
+    fontWeight: 'bold',
   },
 });

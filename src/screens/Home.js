@@ -177,7 +177,7 @@ const Home = (props) => {
               <View style={{marginHorizontal: '30%', flexDirection: 'column'}}>
                 <View style={{flexDirection: 'row'}}>
                   <Icon
-                    name="plus"
+                    name="pluscircleo"
                     color="#303843"
                     size={18}
                     //style={{marginHorizontal: 15}}
@@ -186,7 +186,7 @@ const Home = (props) => {
                   <Text
                     style={{
                       color: '#525253',
-                      fontSize: 13,
+                      fontSize: 15,
                       fontWeight: '200',
                       marginHorizontal: 10,
                     }}>
@@ -194,7 +194,7 @@ const Home = (props) => {
                   </Text>
 
                   <Icon
-                    name="minus"
+                    name="minuscircleo"
                     color="#303843"
                     size={18}
                     //style={{marginHorizontal: 15}}
@@ -237,60 +237,25 @@ const Home = (props) => {
             </TouchableOpacity>
           </View>
         </View>
-        {/* <View
-          style={{
-            flexDirection: 'row',
-            marginHorizontal: 10,
-            marginVertical: 10,
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignContent: 'center',
-            flexWrap: 'wrap',
-          }}>
-          {homePageData.map((item) => {
-            return (
-              <View
-                style={{
-                  flexDirection: 'column',
-                  //marginHorizontal: 10,
-                }}>
-                <TouchableOpacity onPress={() => console.log('Print Out')}>
-                  <Card style={styles.cardContainer}>
-                    <Image
-                      style={styles.imageContainer}
-                      source={{
-                        uri: item.image,
-                      }}
-                      resizeMode="contain"
-                    />
-                  </Card>
-                  <Text style={{alignSelf: 'center', color: '#525253'}}>
-                    {item.name}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            );
-          })}
-        </View> */}
 
         {/* producsts list starts */}
 
         <View
           style={{
             flexDirection: 'row',
-            marginHorizontal: 10,
-            marginVertical: 10,
+            //marginHorizontal: 15,
+            //marginVertical: 15,
             alignItems: 'center',
             justifyContent: 'center',
-            alignContent: 'center',
-            flexWrap: 'wrap',
+            alignSelf: 'center',
           }}>
           <View
             style={{
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity onPress={() => console.log('Print Out')}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('DeliveryStatus')}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -300,6 +265,7 @@ const Home = (props) => {
                   }}
                   resizeMode="contain"
                 />
+
                 {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
               </Card>
               <Text style={{alignSelf: 'center', color: '#525253'}}>
@@ -308,12 +274,14 @@ const Home = (props) => {
             </TouchableOpacity>
           </View>
 
+          {/* One */}
+
           <View
             style={{
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity onPress={() => console.log('Print Out')}>
+            <TouchableOpacity onPress={() => console.log('POS Printer')}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -328,6 +296,8 @@ const Home = (props) => {
             </TouchableOpacity>
           </View>
 
+          {/* two */}
+
           <View
             style={{
               flexDirection: 'column',
@@ -340,53 +310,63 @@ const Home = (props) => {
                   source={require('../assets/images/new_butter.jpg')}
                   resizeMode="contain"
                 />
-                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
               </Card>
               <Text style={{alignSelf: 'center', color: '#525253'}}>
                 Butter
               </Text>
             </TouchableOpacity>
           </View>
+        </View>
 
+        <View
+          style={{
+            flexDirection: 'row',
+            //marginHorizontal: 15,
+            //marginVertical: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignSelf: 'center',
+          }}>
           <View
             style={{
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity onPress={() => console.log('Print Out')}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('DeliveryStatus')}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
                   source={require('../assets/images/new_panner.jpg')}
                   resizeMode="contain"
                 />
-                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
               </Card>
               <Text style={{alignSelf: 'center', color: '#525253'}}>
-                Panner
+                Panneer
               </Text>
             </TouchableOpacity>
           </View>
+
+          {/* One */}
 
           <View
             style={{
               flexDirection: 'column',
               //marginHorizontal: 10,
             }}>
-            <TouchableOpacity onPress={() => console.log('Print Out')}>
+            <TouchableOpacity onPress={() => console.log('POS Printer')}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
                   source={require('../assets/images/new_dryfruits.jpg')}
                   resizeMode="contain"
                 />
-                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
               </Card>
-              <Text style={{alignSelf: 'center', color: '#525253'}}>
-                Dry Fruits
-              </Text>
+              <Text style={{alignSelf: 'center'}}>Dry fruits</Text>
             </TouchableOpacity>
           </View>
+
+          {/* two */}
 
           <View
             style={{
@@ -400,11 +380,8 @@ const Home = (props) => {
                   source={require('../assets/images/leaf_vegetables.jpg')}
                   resizeMode="contain"
                 />
-                {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
               </Card>
-              <Text style={{alignSelf: 'center', color: '#525253'}}>
-                Vegetables
-              </Text>
+              <Text style={{alignSelf: 'center'}}>Vegetables</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -419,95 +396,33 @@ const Home = (props) => {
           </View>
         </View>
 
-        {/* <View
-          style={{
-            flexDirection: 'row',
-            marginHorizontal: 25,
-            marginVertical: 10,
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-            alignContent: 'center',
-            flexWrap: 'wrap',
-          }}>
-          {newArrivalsData.map((item) => {
-            return (
-              <View
-                style={{
-                  flexDirection: 'column',
-                  //marginHorizontal: 10,
-                }}>
-                <TouchableOpacity onPress={() => console.log('Print Out')}>
-                  <Card style={styles.cardContainer}>
-                    <Image
-                      style={styles.imageContainer}
-                      source={{
-                        uri: item.image,
-                      }}
-                      resizeMode="contain"
-                    />
-                  </Card>
-                  <Text style={{alignSelf: 'center', color: '#525253'}}>
-                    {item.name}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            );
-          })}
-        </View> */}
-
         <View
           style={{
             flexDirection: 'row',
-            marginHorizontal: 25,
-            marginVertical: 10,
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-            alignContent: 'center',
-            flexWrap: 'wrap',
+            //marginHorizontal: 15,
+            //marginVertical: 15,
+            //alignItems: 'center',
+            //justifyContent: 'center',
           }}>
-          {newArrivalsData.map((item) => {
-            return (
-              <View
-                style={{
-                  flexDirection: 'column',
-                  //marginHorizontal: 10,
-                }}>
-                <TouchableOpacity onPress={() => console.log('Print Out')}>
-                  <Card style={styles.cardContainer}>
-                    <Image
-                      style={styles.imageContainer}
-                      source={require('../assets/images/new_poojaitems.jpg')}
-                      resizeMode="contain"
-                    />
-                    {/* <Icon name="bike" color="black" style={styles.imageContainer} /> */}
-                  </Card>
-                  <Text style={{alignSelf: 'center', color: '#525253'}}>
-                    Pooja Items
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            );
-          })}
+          <View
+            style={{
+              flexDirection: 'column',
+              marginHorizontal: 30,
+            }}>
+            <TouchableOpacity onPress={() => console.log('Print Out')}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_poojaitems.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Pooja Items
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-
-        {/* <View
-          style={{
-            flexDirection: 'column',
-            //marginHorizontal: 10,
-            width: width * 0.288,
-          }}>
-          <TouchableOpacity onPress={() => console.log('Print Out')}>
-            <Card style={styles.cardContainer}>
-              <Image
-                style={styles.imageContainer}
-                //source={require('../assets/images/leaf_vegetables.jpg')}
-                source={require('../assets/images/new_no_transactions.png')}
-                resizeMode="contain"
-              />
-            </Card>
-            <Text style={{alignSelf: 'center', color: '#525253'}}>example</Text>
-          </TouchableOpacity>
-        </View> */}
       </ScrollView>
     </View>
   );
@@ -544,15 +459,15 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     width: 110,
-    height: 80,
+    height: 120,
     borderRadius: 10,
     alignItems: 'center',
     //margin: 15,
     backgroundColor: '#9AD9F7',
   },
   imageContainer: {
-    width: 60,
-    height: 60,
+    width: 80,
+    height: 100,
     margin: 10,
   },
 });

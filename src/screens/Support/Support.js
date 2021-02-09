@@ -53,29 +53,45 @@ const Support = (props) => {
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
         {otherIssues.map((item) => {
           return (
-            <View
-              style={{
-                borderWidth: 1,
-                borderRadius: 25,
-                borderColor: '#707070',
-                backgroundColor: '#FFFFFF',
-                flexDirection: 'row',
-                width: '80%',
-                margin: 5,
-              }}>
-              <Text style={{margin: 10}}>{item.name}</Text>
-              <Ant
-                name="right"
-                color="#000000"
-                size={20}
-                style={{marginTop: 10}}
-              />
-            </View>
+            <TouchableOpacity
+              onPress={() => console.log('Support Screen', item.name)}>
+              <View
+                style={{
+                  borderWidth: 1,
+                  borderRadius: 25,
+                  borderColor: '#707070',
+                  backgroundColor: '#FFFFFF',
+                  flexDirection: 'row',
+                  //width: '80%',
+                  margin: 5,
+                  width: width * 0.856,
+                }}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    width: width * 0.77333333333,
+                  }}>
+                  <Text style={{margin: 10}} ellipsizeMode="tail">
+                    {item.name}
+                  </Text>
+                </View>
+
+                <View style={{flexDirection: 'row-reverse'}}>
+                  <Ant
+                    name="right"
+                    color="#000000"
+                    size={20}
+                    style={{marginTop: 10, marginRight: 8}}
+                  />
+                </View>
+              </View>
+            </TouchableOpacity>
           );
         })}
       </View>
 
-      <TouchableOpacity onPress={() => console.log('Add Money Clicked')}>
+      <TouchableOpacity>
         <View
           style={{
             justifyContent: 'center',
@@ -105,26 +121,40 @@ const Support = (props) => {
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
         {generalQueries.map((item) => {
           return (
-            <View
-              style={{
-                borderWidth: 1,
-                borderRadius: 25,
-                borderColor: '#707070',
-                backgroundColor: '#FFFFFF',
-                flexDirection: 'row',
-                width: '80%',
-                margin: 5,
-              }}>
-              <Text style={{margin: 10}} numberOfLines={2}>
-                {item.name}
-              </Text>
-              {/* <Ant
-                name="right"
-                color="#000000"
-                size={20}
-                style={{marginTop: 10, marginLeft: -10}}
-              /> */}
-            </View>
+            <TouchableOpacity
+              onPress={() => console.log('Support Screen', item.name)}>
+              <View
+                style={{
+                  borderWidth: 1,
+                  borderRadius: 25,
+                  borderColor: '#707070',
+                  backgroundColor: '#FFFFFF',
+                  flexDirection: 'row',
+                  //width: '80%',
+                  margin: 5,
+                  width: width * 0.856,
+                }}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    width: width * 0.77333333333,
+                  }}>
+                  <Text style={{margin: 10}} ellipsizeMode="tail">
+                    {item.name}
+                  </Text>
+                </View>
+
+                <View style={{flexDirection: 'row-reverse'}}>
+                  <Ant
+                    name="down"
+                    color="#000000"
+                    size={20}
+                    style={{marginTop: 10, marginRight: 8}}
+                  />
+                </View>
+              </View>
+            </TouchableOpacity>
           );
         })}
       </View>

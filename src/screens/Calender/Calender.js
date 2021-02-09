@@ -44,6 +44,7 @@ const Calender = (props) => {
               fontSize: 13,
               fontWeight: 'bold',
               margin: 5,
+              fontFamily: 'arlrdbd',
             }}>
             My Subscriptions
           </Text>
@@ -115,7 +116,12 @@ const Calender = (props) => {
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <Text
             numberOfLines={2}
-            style={{color: '#5C5C5C', fontSize: 18, textAlign: 'center'}}>
+            style={{
+              color: '#5C5C5C',
+              fontSize: 18,
+              textAlign: 'center',
+              fontFamily: 'AvenirLTStd-Book',
+            }}>
             Look’s like you haven’t ordered anything for this day
           </Text>
         </View>
@@ -140,6 +146,7 @@ const Calender = (props) => {
                 fontSize: 18,
                 fontWeight: 'bold',
                 margin: 10,
+                fontFamily: 'AvenirLTStd-Black',
               }}>
               Order Now
             </Text>

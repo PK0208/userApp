@@ -228,28 +228,28 @@ const CartScreen = (props) => {
               <View style={{flexDirection: 'column', margin: 10}}>
                 <View style={{flexDirection: 'row'}}>
                   <Icon
-                    name="plus"
+                    name="pluscircleo"
                     color="#303843"
                     size={18}
                     //style={{marginHorizontal: 15}}
-                    onPress={() => console.log('Plus Icon Pressed')}
+                    onPress={() => increaseQuantity()}
                   />
                   <Text
                     style={{
                       color: '#525253',
                       fontSize: 13,
                       fontWeight: '200',
-                      marginHorizontal: 5,
+                      marginHorizontal: 10,
                     }}>
-                    2
+                    {quantity}
                   </Text>
 
                   <Icon
-                    name="minus"
+                    name="minuscircleo"
                     color="#303843"
                     size={18}
                     //style={{marginHorizontal: 15}}
-                    onPress={() => console.log('Minus Icon Pressed')}
+                    onPress={() => decreaseQuantity()}
                   />
                 </View>
 
@@ -258,6 +258,7 @@ const CartScreen = (props) => {
                     color: '#525253',
                     fontSize: 14,
                     fontWeight: 'bold',
+                    marginTop: 5,
                   }}
                   numberOfLines={1}>
                   Rs {item.price}

@@ -41,7 +41,12 @@ const BillingHistory = (props) => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: 'bold',
+                fontFamily: 'arlrdbd',
+              }}>
               No Transaction
             </Text>
           </View>
