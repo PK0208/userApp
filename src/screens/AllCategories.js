@@ -175,7 +175,7 @@ const AllCategories = (props) => {
           })}
         </View> */}
 
-        <View
+        {/* <View
           style={{
             flexDirection: 'row',
             //marginHorizontal: 15,
@@ -206,6 +206,296 @@ const AllCategories = (props) => {
               </TouchableOpacity>
             </View>;
           })}
+        </View> */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            //marginHorizontal: 15,
+            //marginVertical: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignSelf: 'center',
+          }}>
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_panner.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Panneer
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* One */}
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              onPress={() => console.log('POS Printer')}
+              activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_dryfruits.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center'}}>Dry fruits</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* two */}
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              onPress={() => console.log('Print Out')}
+              activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/leaf_vegetables.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center'}}>Vegetables</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* 2nd Row */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            //marginHorizontal: 15,
+            //marginVertical: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignSelf: 'center',
+          }}>
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_panner.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Panneer
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* One */}
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              onPress={() => console.log('POS Printer')}
+              activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_dryfruits.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center'}}>Dry fruits</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* two */}
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              onPress={() => console.log('Print Out')}
+              activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/leaf_vegetables.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center'}}>Vegetables</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* 3 row */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            //marginHorizontal: 15,
+            //marginVertical: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignSelf: 'center',
+          }}>
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_panner.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Panneer
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* One */}
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              onPress={() => console.log('POS Printer')}
+              activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_dryfruits.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center'}}>Dry fruits</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* two */}
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              onPress={() => console.log('Print Out')}
+              activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/leaf_vegetables.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center'}}>Vegetables</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* 4 row */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            //marginHorizontal: 15,
+            //marginVertical: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignSelf: 'center',
+          }}>
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_panner.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Panneer
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* One */}
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              onPress={() => console.log('POS Printer')}
+              activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_dryfruits.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center'}}>Dry fruits</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* two */}
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              onPress={() => console.log('Print Out')}
+              activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/leaf_vegetables.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center'}}>Vegetables</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
     </View>

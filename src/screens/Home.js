@@ -19,51 +19,6 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 const {height, width} = Dimensions.get('window');
 
-const homePageData = [
-  {
-    name: 'A2 Milk',
-    /*  image:
-      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png', */
-  },
-
-  {
-    name: 'Oil & Ghee',
-    image:
-      'https://lh3.googleusercontent.com/pxYgcjlCiZTJ4zPtLg8C0Kf7xysC439xDgWG8urI2qWBmd4Izw0x1u2G0eOJOJQPKk7j=s85',
-  },
-
-  {
-    name: 'Butter',
-    image:
-      'https://lh3.googleusercontent.com/vByQWskDImsi7uWX1V7We4q7lsNJnhrOk7jhvH8HbQhZ2qQvMTReAIAxUjyuYn0OkBtCHFw=s106',
-  },
-
-  {
-    name: 'Panneer',
-    image:
-      'https://lh3.googleusercontent.com/aagd6v1PEkWD7aQhKimcvMschq-v4EwxjGf7lr-lhuuhvHtPGGs4OWlzkmjUTjRllEuZ=s148',
-  },
-
-  {
-    name: 'Dry Fruits',
-    image:
-      'https://lh3.googleusercontent.com/sj5g1c-RTMtLoo5rk0XaJnOu-RFagoPJspJbJ-2S4bNlcLghgd3HOix0aXsE7ZDga_g1=s95',
-  },
-
-  {
-    name: 'Vegetables',
-    image:
-      'https://lh3.googleusercontent.com/QE9321hT2oxBdCGBahzo9wkY8aGDu0eLquTlvtxfwh3u_qt8ziYOTAiUHXTTDlQ_hgvAfA=s85',
-  },
-];
-
-const newArrivalsData = [
-  {
-    name: 'Pooja Items',
-    image:
-      'https://lh3.googleusercontent.com/9WY-7OVQHDj3ZxX6zvGM9Bl1R1hb9_eVfi-sKL_GQfPWfGvvtoBe4H6vAVYK_Xk-2FH5Vw=s85',
-  },
-];
 const Home = (props) => {
   const isFocused = useIsFocused();
   const [quantity, setQuantity] = useState(1);
