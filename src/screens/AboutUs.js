@@ -34,7 +34,7 @@ const AboutUs = (props) => {
   useEffect(() => {}, [props, isFocused]);
 
   return (
-    <View style={{height: '100%'}}>
+    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
       <Appbar navigation={props.navigation} />
       {/* <ImageSlider /> */}
       <View style={{alignItems: 'center', marginVertical: 7}}>
@@ -78,37 +78,39 @@ const AboutUs = (props) => {
 
           {aboutUsData.map((item) => {
             return (
-              <View
-                style={{
-                  borderWidth: 1,
-                  borderRadius: 25,
-                  borderColor: '#707070',
-                  backgroundColor: '#FFFFFF',
-                  flexDirection: 'row',
-                  //width: '80%',
-                  margin: 5,
-                  width: width * 0.74133333333,
-                }}>
+              <TouchableOpacity>
                 <View
                   style={{
+                    borderWidth: 1,
+                    borderRadius: 25,
+                    borderColor: '#707070',
+                    backgroundColor: '#FFFFFF',
                     flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    width: 250,
+                    //width: '80%',
+                    margin: 5,
+                    width: width * 0.74133333333,
                   }}>
-                  <Text style={{margin: 10}} ellipsizeMode="tail">
-                    {item.name}
-                  </Text>
-                </View>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      width: width * 0.66874666666,
+                    }}>
+                    <Text style={{margin: 10}} ellipsizeMode="tail">
+                      {item.name}
+                    </Text>
+                  </View>
 
-                <View style={{flexDirection: 'row-reverse'}}>
-                  <Ant
-                    name="right"
-                    color="#000000"
-                    size={20}
-                    style={{marginTop: 10}}
-                  />
+                  <View style={{flexDirection: 'row-reverse'}}>
+                    <Ant
+                      name="right"
+                      color="#000000"
+                      size={20}
+                      style={{marginTop: 10, marginRight: 14}}
+                    />
+                  </View>
                 </View>
-              </View>
+              </TouchableOpacity>
             );
           })}
         </View>

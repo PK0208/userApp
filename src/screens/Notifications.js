@@ -21,17 +21,14 @@ const Notifications = (props) => {
   useEffect(() => {}, [props, isFocused]);
 
   return (
-    <View style={{height: '100%'}}>
+    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
       <Appbar navigation={props.navigation} />
       <View style={{alignItems: 'center', marginVertical: 7}}>
         <View style={{marginTop: '50%'}}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image
               style={styles.imageContainer}
-              source={{
-                uri:
-                  'https://lh3.googleusercontent.com/QN6sM2HbGIpzakDa3vjC4Qo7cudTiQbOJSVlQ0psCdCkoumPhJMzjTzRz8yjeEDkP-e5Kw=s93',
-              }}
+              source={require('../assets/images/new_no_notifications.png')}
               resizeMode="contain"
             />
           </View>

@@ -19,79 +19,6 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 const {height, width} = Dimensions.get('window');
 
-const homePageData = [
-  {
-    name: 'A2 Milk',
-    image:
-      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
-  },
-
-  {
-    name: 'Oil & Ghee',
-    image:
-      'https://lh3.googleusercontent.com/pxYgcjlCiZTJ4zPtLg8C0Kf7xysC439xDgWG8urI2qWBmd4Izw0x1u2G0eOJOJQPKk7j=s85',
-  },
-
-  {
-    name: 'Butter',
-    image:
-      'https://lh3.googleusercontent.com/vByQWskDImsi7uWX1V7We4q7lsNJnhrOk7jhvH8HbQhZ2qQvMTReAIAxUjyuYn0OkBtCHFw=s106',
-  },
-
-  {
-    name: 'Panneer',
-    image:
-      'https://lh3.googleusercontent.com/aagd6v1PEkWD7aQhKimcvMschq-v4EwxjGf7lr-lhuuhvHtPGGs4OWlzkmjUTjRllEuZ=s148',
-  },
-
-  {
-    name: 'Dry Fruits',
-    image:
-      'https://lh3.googleusercontent.com/sj5g1c-RTMtLoo5rk0XaJnOu-RFagoPJspJbJ-2S4bNlcLghgd3HOix0aXsE7ZDga_g1=s95',
-  },
-
-  {
-    name: 'Vegetables',
-    image:
-      'https://lh3.googleusercontent.com/QE9321hT2oxBdCGBahzo9wkY8aGDu0eLquTlvtxfwh3u_qt8ziYOTAiUHXTTDlQ_hgvAfA=s85',
-  },
-  {
-    name: 'Fruits',
-    image:
-      'https://lh3.googleusercontent.com/mrJQV06DMpfIITAMs5ImppJcmtB-_kO-s2UDuD5GiMBydSyxPa44nSQEpf_iaSCEh5Xg=s110',
-  },
-  {
-    name: 'Curd',
-    image:
-      'https://lh3.googleusercontent.com/pAzU3aC6fNgn1MwxnQo8V1CWj96fPFg1KdZVJgucb4P44GqDV16maD2P72-apAByzcNvRKY=s111',
-  },
-  {
-    name: 'Home care',
-    image:
-      'https://lh3.googleusercontent.com/qMQ_9CmHHBM8zIDA0M7mwpgsAsrOSlP07s_OkGDXUF7S5Tf2vHhdfrXfgmUplXZpww6BJx8=s104',
-  },
-  {
-    name: 'Organic Items',
-    image:
-      'https://lh3.googleusercontent.com/NO-5RvXKbeRGghvFK63hMLXKD139EyMkl2OOJdcVdcFdRhalPPzkEcCswfpGUNesEYG2ks0=s97',
-  },
-  {
-    name: 'Pooja items',
-    image:
-      'https://lh3.googleusercontent.com/9WY-7OVQHDj3ZxX6zvGM9Bl1R1hb9_eVfi-sKL_GQfPWfGvvtoBe4H6vAVYK_Xk-2FH5Vw=s85',
-  },
-  {
-    name: 'Ayurveda',
-    image:
-      'https://lh3.googleusercontent.com/QE9321hT2oxBdCGBahzo9wkY8aGDu0eLquTlvtxfwh3u_qt8ziYOTAiUHXTTDlQ_hgvAfA=s85',
-  },
-  {
-    name: 'Other organic',
-    image:
-      'https://lh3.googleusercontent.com/NO-5RvXKbeRGghvFK63hMLXKD139EyMkl2OOJdcVdcFdRhalPPzkEcCswfpGUNesEYG2ks0=s97',
-  },
-];
-
 const count = 3;
 const flex_height = height / count;
 
@@ -174,7 +101,7 @@ const CategoryByName = (props) => {
         <View style={{flexDirection: 'column'}}>
           <View style={{flexDirection: 'row', marginLeft: 15, margin: 5}}>
             <Icon
-              name="plus"
+              name="pluscircleo"
               color="#303843"
               size={18}
               //style={{marginHorizontal: 15}}
@@ -191,7 +118,7 @@ const CategoryByName = (props) => {
             </Text>
 
             <Icon
-              name="minus"
+              name="minuscircleo"
               color="#303843"
               size={18}
               //style={{marginHorizontal: 15}}
@@ -251,6 +178,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
+    backgroundColor: '#F7F7F7',
   },
   box: {
     height: flex_height,

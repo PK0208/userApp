@@ -29,66 +29,66 @@ const homePageData = [
   {
     name: 'Oil & Ghee',
     image:
-      'https://lh3.googleusercontent.com/pxYgcjlCiZTJ4zPtLg8C0Kf7xysC439xDgWG8urI2qWBmd4Izw0x1u2G0eOJOJQPKk7j=s85',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
 
   {
     name: 'Butter',
     image:
-      'https://lh3.googleusercontent.com/vByQWskDImsi7uWX1V7We4q7lsNJnhrOk7jhvH8HbQhZ2qQvMTReAIAxUjyuYn0OkBtCHFw=s106',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
 
   {
     name: 'Panneer',
     image:
-      'https://lh3.googleusercontent.com/aagd6v1PEkWD7aQhKimcvMschq-v4EwxjGf7lr-lhuuhvHtPGGs4OWlzkmjUTjRllEuZ=s148',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
 
   {
     name: 'Dry Fruits',
     image:
-      'https://lh3.googleusercontent.com/sj5g1c-RTMtLoo5rk0XaJnOu-RFagoPJspJbJ-2S4bNlcLghgd3HOix0aXsE7ZDga_g1=s95',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
 
   {
     name: 'Vegetables',
     image:
-      'https://lh3.googleusercontent.com/QE9321hT2oxBdCGBahzo9wkY8aGDu0eLquTlvtxfwh3u_qt8ziYOTAiUHXTTDlQ_hgvAfA=s85',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
   {
     name: 'Fruits',
     image:
-      'https://lh3.googleusercontent.com/mrJQV06DMpfIITAMs5ImppJcmtB-_kO-s2UDuD5GiMBydSyxPa44nSQEpf_iaSCEh5Xg=s110',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
   {
     name: 'Curd',
     image:
-      'https://lh3.googleusercontent.com/pAzU3aC6fNgn1MwxnQo8V1CWj96fPFg1KdZVJgucb4P44GqDV16maD2P72-apAByzcNvRKY=s111',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
   {
     name: 'Home care',
     image:
-      'https://lh3.googleusercontent.com/qMQ_9CmHHBM8zIDA0M7mwpgsAsrOSlP07s_OkGDXUF7S5Tf2vHhdfrXfgmUplXZpww6BJx8=s104',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
   {
     name: 'Organic Items',
     image:
-      'https://lh3.googleusercontent.com/NO-5RvXKbeRGghvFK63hMLXKD139EyMkl2OOJdcVdcFdRhalPPzkEcCswfpGUNesEYG2ks0=s97',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
   {
     name: 'Pooja items',
     image:
-      'https://lh3.googleusercontent.com/9WY-7OVQHDj3ZxX6zvGM9Bl1R1hb9_eVfi-sKL_GQfPWfGvvtoBe4H6vAVYK_Xk-2FH5Vw=s85',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
   {
     name: 'Ayurveda',
     image:
-      'https://lh3.googleusercontent.com/ShLrOxqWgew_dPWFCuGHDO5w3H8iBsUTAbtJ5uxTL7g1RpNNvj0Jrs0i5_0ZFeih7dtQT4o=s128',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
   {
     name: 'Other organic',
     image:
-      'https://lh3.googleusercontent.com/NO-5RvXKbeRGghvFK63hMLXKD139EyMkl2OOJdcVdcFdRhalPPzkEcCswfpGUNesEYG2ks0=s97',
+      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
   },
 ];
 
@@ -133,47 +133,86 @@ const AllCategories = (props) => {
           </View>
         </View>
 
+        {/* New Categories Start */}
+
         <View
           style={{
             flexDirection: 'row',
-            marginHorizontal: 10,
-            marginVertical: 10,
+            //marginHorizontal: 15,
+            //marginVertical: 15,
             alignItems: 'center',
             justifyContent: 'center',
-            alignContent: 'center',
-            flexWrap: 'wrap',
+            alignSelf: 'center',
           }}>
-          {homePageData.map((item) => {
-            return (
-              <View
-                style={{
-                  flexDirection: 'column',
-                  //marginHorizontal: 10,
-                }}>
-                <TouchableOpacity
-                  onPress={() =>
-                    props.navigation.navigate('CategoryByName', {
-                      product_name: item.name,
-                      product_image: item.image,
-                    })
-                  }>
-                  <Card style={styles.cardContainer}>
-                    <Image
-                      style={styles.imageContainer}
-                      source={{
-                        uri: item.image,
-                      }}
-                      resizeMode="contain"
-                    />
-                  </Card>
-                  <Text style={{alignSelf: 'center', color: '#525253'}}>
-                    {item.name}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            );
-          })}
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity
+              activeOpacity={1}
+              onPress={() =>
+                props.navigation.navigate('CategoryByName', {
+                  product_name: 'Panneer',
+                  product_image: '../assets/images/new_panner.jpg',
+                })
+              }>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_panner.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Panneer
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={require('../assets/images/new_panner.jpg')}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                Panneer
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'column',
+              //marginHorizontal: 10,
+            }}>
+            <TouchableOpacity activeOpacity={1}>
+              <Card style={styles.cardContainer}>
+                <Image
+                  style={styles.imageContainer}
+                  source={{
+                    uri:
+                      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
+                  }}
+                  resizeMode="contain"
+                />
+              </Card>
+              <Text style={{alignSelf: 'center', color: '#525253'}}>
+                A2 Milk
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
+
+        {/* New Categories end */}
       </ScrollView>
     </View>
   );

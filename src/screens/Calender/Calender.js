@@ -99,10 +99,7 @@ const Calender = (props) => {
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <Image
             style={styles.imageContainer}
-            source={{
-              uri:
-                'https://lh3.googleusercontent.com/8y-jkL3B8SJwc0NmyAP8rBFSF-F5yw9gbqe56akwV6izWnP-BuJc6o-sG5SEN3sLU9iIWw=s84 ',
-            }}
+            source={require('../../assets/images/new_no_orders.jpg')}
             resizeMode="contain"
           />
         </View>

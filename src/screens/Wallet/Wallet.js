@@ -13,7 +13,7 @@ import Appbar from '../../components/Appbar';
 import {useIsFocused} from '@react-navigation/native';
 import axios from 'axios';
 import {Card, CardItem, Body} from 'native-base';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Ant from 'react-native-vector-icons/AntDesign';
 
 const {height, width} = Dimensions.get('window');
 const Calender = (props) => {
@@ -22,7 +22,7 @@ const Calender = (props) => {
   useEffect(() => {}, [props, isFocused]);
 
   return (
-    <View style={{height: '100%'}}>
+    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
       <Appbar navigation={props.navigation} />
       {/* <ImageSlider /> */}
       <View
@@ -58,7 +58,7 @@ const Calender = (props) => {
         </View>
       </View>
 
-      <View
+      {/* <View
         style={{
           alignItems: 'center',
           borderColor: '#97D5F3',
@@ -84,10 +84,51 @@ const Calender = (props) => {
           name="right"
           color="black"
           size={20}
-          style={{marginLeft: 40}}
+          style={{marginLeft: 40, marginRight: 14}}
           //onPress={() => props.navigation.navigate('Home')}
         />
-      </View>
+      </View> */}
+
+      <TouchableOpacity>
+        <View
+          style={{
+            alignItems: 'center',
+            borderColor: '#97D5F3',
+            justifyContent: 'center',
+            flexDirection: 'row',
+            margin: 40,
+            borderRadius: 25,
+            borderColor: '#707070',
+            backgroundColor: '#FFFFFF',
+          }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'center',
+              width: width * 0.77333333333,
+            }}>
+            <Text
+              style={{
+                fontWeight: '600',
+                fontSize: 20,
+                color: '#000000',
+                margin: 5,
+              }}
+              numberOfLines={1}>
+              View all transactions
+            </Text>
+          </View>
+
+          <View style={{flexDirection: 'row-reverse'}}>
+            <Ant
+              name="right"
+              color="#000000"
+              size={20}
+              style={{marginTop: 10, marginRight: 14}}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
 
       <TouchableOpacity onPress={() => console.log('Add Money Clicked')}>
         <View

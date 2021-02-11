@@ -21,7 +21,7 @@ const BillingHistory = (props) => {
   useEffect(() => {}, [props, isFocused]);
 
   return (
-    <View style={{height: '100%'}}>
+    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
       <Appbar navigation={props.navigation} />
       {/* <ImageSlider /> */}
       <View style={{alignItems: 'center', marginVertical: 7}}>
@@ -29,10 +29,7 @@ const BillingHistory = (props) => {
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image
               style={styles.imageContainer}
-              source={{
-                uri:
-                  'https://lh3.googleusercontent.com/nF3WbSLdkPev3xIPG-7ytagmWru83JdzZ4hfqEba0gNZABX3y7A_0KiMC5Kv8ACYVDPy=s55',
-              }}
+              source={require('../assets/images/new_no_transactions.png')}
               resizeMode="contain"
             />
           </View>

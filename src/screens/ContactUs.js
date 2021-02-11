@@ -21,7 +21,7 @@ const ContactUs = (props) => {
   useEffect(() => {}, [props, isFocused]);
 
   return (
-    <View style={{height: '100%'}}>
+    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
       <Appbar navigation={props.navigation} />
       {/* <ImageSlider /> */}
       <View style={{alignItems: 'center', marginVertical: 7}}>
@@ -40,7 +40,7 @@ const ContactUs = (props) => {
             executive will be un touch shortly
           </Text>
 
-          <TouchableOpacity onPress={() => console.log('Add Money Clicked')}>
+          <TouchableOpacity onPress={() => console.log('Call us Clicked')}>
             <View
               style={{
                 justifyContent: 'center',
@@ -71,10 +71,7 @@ const ContactUs = (props) => {
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image
               style={styles.imageContainer}
-              source={{
-                uri:
-                  'https://lh3.googleusercontent.com/asvJspzqeJtLgc8B4KfeiWJXDuDqOv8eMW1JTiuLknuOPlJPfYqvlGmG2KH1T0CxgSFpcg=s70',
-              }}
+              source={require('../assets/images/new_contactus.jpg')}
               resizeMode="contain"
             />
           </View>

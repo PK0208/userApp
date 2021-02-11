@@ -17,15 +17,11 @@ import {Card, CardItem, Body} from 'native-base';
 const {height, width} = Dimensions.get('window');
 const Orders = (props) => {
   const isFocused = useIsFocused();
-  
-  useEffect(() => {
-    
-  }, [props, isFocused]);
 
-  
+  useEffect(() => {}, [props, isFocused]);
 
   return (
-    <View style={{height:'100%'}}>
+    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
       <Appbar navigation={props.navigation} />
       {/* <ImageSlider /> */}
       <View style={{alignItems: 'center', marginVertical: 7}}>
@@ -33,7 +29,6 @@ const Orders = (props) => {
           Featured Items Orders
         </Text>
       </View>
-     
     </View>
   );
 };

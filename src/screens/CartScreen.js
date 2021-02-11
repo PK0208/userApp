@@ -159,7 +159,7 @@ const CartScreen = (props) => {
                   <View style={{flexDirection: 'column'}}>
                     <View style={{flexDirection: 'row'}}>
                       <Icon
-                        name="plus"
+                        name="pluscircleo"
                         color="#303843"
                         size={18}
                         //style={{marginHorizontal: 15}}
@@ -176,7 +176,7 @@ const CartScreen = (props) => {
                       </Text>
 
                       <Icon
-                        name="minus"
+                        name="minuscircleo"
                         color="#303843"
                         size={18}
                         //style={{marginHorizontal: 15}}
@@ -228,7 +228,7 @@ const CartScreen = (props) => {
               <View style={{flexDirection: 'column', margin: 10}}>
                 <View style={{flexDirection: 'row'}}>
                   <Icon
-                    name="plus"
+                    name="pluscircleo"
                     color="#303843"
                     size={18}
                     //style={{marginHorizontal: 15}}
@@ -245,7 +245,7 @@ const CartScreen = (props) => {
                   </Text>
 
                   <Icon
-                    name="minus"
+                    name="minuscircleo"
                     color="#303843"
                     size={18}
                     //style={{marginHorizontal: 15}}
