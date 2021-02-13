@@ -111,8 +111,8 @@ const AllCategories = (props) => {
             <Icon
               name="search1"
               color="black"
-              size={25}
-              style={{marginHorizontal: 15}}
+              size={20}
+              //style={{marginHorizontal: 15}}
               //onPress={() => props.navigation.navigate('Home')}
             />
             <TextInput
@@ -164,9 +164,7 @@ const AllCategories = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center', color: '#525253'}}>
-                Panneer
-              </Text>
+              <Text style={styles.categoryText}>Paneer</Text>
             </TouchableOpacity>
           </View>
 
@@ -183,9 +181,7 @@ const AllCategories = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center', color: '#525253'}}>
-                Panneer
-              </Text>
+              <Text style={styles.categoryText}>Paneer</Text>
             </TouchableOpacity>
           </View>
 
@@ -205,9 +201,7 @@ const AllCategories = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center', color: '#525253'}}>
-                A2 Milk
-              </Text>
+              <Text style={styles.categoryText}>A2 Milk</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -233,32 +227,43 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     marginHorizontal: 25,
+    margin: 5,
   },
   inputs: {
     height: 45,
-    marginLeft: 16,
+    //marginLeft: 16,
     borderBottomColor: '#FFFFFF',
     flex: 1,
   },
   cardStyle: {
-    width: width * 0.85285333333,
+    //width: width * 0.85285333333,
     //height: height * 0.07194244604,
     backgroundColor: '#FFFFFFE6',
     borderWidth: 1,
     borderColor: '#F7F7F7',
   },
   cardContainer: {
-    width: 110,
-    height: 80,
+    //width: 110,
+    //height: 80,
+    width: width * 0.288,
+    height: width * 0.288,
     borderRadius: 10,
     alignItems: 'center',
     //margin: 15,
     backgroundColor: '#9AD9F7',
   },
   imageContainer: {
-    width: 60,
-    height: 60,
+    //width: 60,
+    //height: 60,
+    width: width * 0.248,
+    height: width * 0.248,
     margin: 10,
+  },
+  categoryText: {
+    alignSelf: 'center',
+    color: '#525253',
+    fontFamily: 'ARLRDBD',
+    fontSize: 13,
   },
 });
 export default AllCategories;

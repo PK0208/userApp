@@ -46,12 +46,22 @@ const Calender = (props) => {
             margin: 40,
           }}>
           <Text
-            style={{fontWeight: 'bold', fontSize: 18, color: '#000000'}}
+            style={{
+              fontWeight: 'bold',
+              fontSize: 18,
+              color: '#000000',
+              fontFamily: 'Avenir Black',
+            }}
             numberOfLines={1}>
             Total Balance
           </Text>
           <Text
-            style={{fontWeight: 'bold', fontSize: 38, color: '#000000'}}
+            style={{
+              fontWeight: 'bold',
+              fontSize: 38,
+              color: '#000000',
+              fontFamily: 'Avenir Black',
+            }}
             numberOfLines={1}>
             ₹57.5
           </Text>
@@ -113,6 +123,7 @@ const Calender = (props) => {
                 fontSize: 20,
                 color: '#000000',
                 margin: 5,
+                fontFamily: 'Avenir Light',
               }}
               numberOfLines={1}>
               View all transactions
@@ -151,6 +162,7 @@ const Calender = (props) => {
               fontWeight: 'bold',
               margin: 10,
               color: '#FFFFFF',
+              fontFamily: 'Avenir Black',
             }}>
             Add Money
           </Text>

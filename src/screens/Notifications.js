@@ -37,10 +37,16 @@ const Notifications = (props) => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text style={{fontSize: 20, fontWeight: 'bold'}}>
+            <Text
+              style={{fontSize: 20, fontWeight: 'bold', fontFamily: 'ARLRDBD'}}>
               Nothing in here right now !
             </Text>
-            <Text style={{fontSize: 18, color: '#757575'}}>
+            <Text
+              style={{
+                fontSize: 17,
+                color: '#757575',
+                fontFamily: 'Avenir Book',
+              }}>
               We’ll let you know when we have
             </Text>
           </View>

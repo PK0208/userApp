@@ -42,19 +42,45 @@ const Subscriptions = (props) => {
             fontSize: 13,
             fontWeight: 'bold',
             margin: 5,
+            fontFamily: 'ARLRDBD',
           }}>
           My Subscriptions
         </Text>
       </View>
 
       <View style={{flexDirection: 'column', marginLeft: 27, margin: 5}}>
-        <Text style={{color: '#000000', fontSize: 18, fontWeight: 'bold'}}>
+        <Text
+          style={{
+            color: '#000000',
+            fontSize: 18,
+            fontWeight: 'bold',
+            fontFamily: 'Avenir Black',
+          }}>
           Why should I subscribe ?
         </Text>
         <View style={{marginLeft: 22}}>
-          <Text style={{color: '#000000', fontSize: 18}}>No tension </Text>
-          <Text style={{color: '#000000', fontSize: 18}}>Free delivery</Text>
-          <Text style={{color: '#000000', fontSize: 18}}>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 18,
+              fontFamily: 'Avenir Light',
+            }}>
+            No tension{' '}
+          </Text>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 18,
+              fontFamily: 'Avenir Light',
+            }}>
+            Free delivery
+          </Text>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 18,
+              fontFamily: 'Avenir Light',
+            }}>
             Customisable delivery
           </Text>
         </View>

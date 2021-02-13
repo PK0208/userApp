@@ -48,7 +48,13 @@ const AboutUs = (props) => {
             backgroundColor: '#FFFFFF',
             margin: 10,
           }}>
-          <Text style={{color: '#000000', fontSize: 16, margin: 20}}>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 16,
+              margin: 20,
+              fontFamily: 'Avenir Book',
+            }}>
             Ksheerdham is a leading manufacture1 and supplier of A2 Gir Cow Milk
             & Milk Products.Our objective is to produce safe and quality milk
             from healthy animals “using management practices that are
@@ -96,7 +102,13 @@ const AboutUs = (props) => {
                       justifyContent: 'space-between',
                       width: width * 0.66874666666,
                     }}>
-                    <Text style={{margin: 10}} ellipsizeMode="tail">
+                    <Text
+                      style={{
+                        margin: 10,
+                        fontFamily: 'Avenir Light',
+                        fontSize: 12,
+                      }}
+                      ellipsizeMode="tail">
                       {item.name}
                     </Text>
                   </View>

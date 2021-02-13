@@ -30,20 +30,50 @@ const Profile = (props) => {
             style={styles.avatar}
             source={require('../assets/images/image_user.jpeg')}
           />
-          <Text style={{color: '#000000', fontSize: 20, fontWeight: 'bold'}}>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 20,
+              fontWeight: 'bold',
+              fontFamily: 'Avenir Black',
+            }}>
             Rahul Kumar
           </Text>
-          <Text style={{color: '#000000', fontSize: 20}}>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 20,
+              fontFamily: 'Avenir Light',
+            }}>
             rahulkumar@gmail.com
           </Text>
-          <Text style={{color: '#000000', fontSize: 20}}>+91 77889900223</Text>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 20,
+              fontFamily: 'Avenir Light',
+            }}>
+            +91 77889900223
+          </Text>
         </View>
 
         <View>
-          <Text style={{fontSize: 18, marginLeft: 15, marginTop: 10}}>
+          <Text
+            style={{
+              fontSize: 18,
+              marginLeft: 15,
+              marginTop: 10,
+              fontFamily: 'Avenir Light',
+            }}>
             Address
           </Text>
-          <Text style={{fontSize: 18, marginLeft: 15, marginBottom: 10}}>
+          <Text
+            style={{
+              fontSize: 18,
+              marginLeft: 15,
+              marginBottom: 10,
+              fontFamily: 'Avenir Light',
+            }}>
             1-2/4 Banjara Hills Hyderabad
           </Text>
         </View>

@@ -38,15 +38,19 @@ const Calender = (props) => {
             backgroundColor: '#FFFFFF',
             borderColor: '#FFFFFF',
           }}>
-          <Text
-            style={{
-              color: '#4C82E8',
-              fontSize: 13,
-              fontWeight: 'bold',
-              margin: 5,
-            }}>
-            My Subscriptions
-          </Text>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('Subscriptions')}>
+            <Text
+              style={{
+                color: '#4C82E8',
+                fontSize: 13,
+                fontWeight: 'bold',
+                margin: 5,
+                fontFamily: 'ARLRDBD',
+              }}>
+              My Subscriptions
+            </Text>
+          </TouchableOpacity>
         </View>
 
         <View
@@ -104,7 +108,8 @@ const Calender = (props) => {
           />
         </View>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+          <Text
+            style={{fontSize: 18, fontWeight: 'bold', fontFamily: 'ARLRDBD'}}>
             No Orders Scheduled
           </Text>
         </View>
@@ -112,7 +117,12 @@ const Calender = (props) => {
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <Text
             numberOfLines={2}
-            style={{color: '#5C5C5C', fontSize: 18, textAlign: 'center'}}>
+            style={{
+              color: '#5C5C5C',
+              fontSize: 18,
+              textAlign: 'center',
+              fontFamily: 'Avenir Book',
+            }}>
             Look’s like you haven’t ordered anything for this day
           </Text>
         </View>
@@ -137,6 +147,7 @@ const Calender = (props) => {
                 fontSize: 18,
                 fontWeight: 'bold',
                 margin: 10,
+                fontFamily: 'Avenir Black',
               }}>
               Order Now
             </Text>

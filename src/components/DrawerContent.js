@@ -60,7 +60,13 @@ const DrawerContent = (props) => {
               source={require('../assets/images/image_user.jpeg')}
             />
           </View>
-          <Text style={{marginLeft: 18, fontSize: 18, fontWeight: 'bold'}}>
+          <Text
+            style={{
+              marginLeft: 18,
+              fontSize: 18,
+              fontWeight: 'bold',
+              fontFamily: 'Avenir Black',
+            }}>
             Rahul Kumar
           </Text>
         </View>
@@ -128,7 +134,13 @@ const DrawerContent = (props) => {
                         justifyContent: 'space-between',
                         width: width * 0.49018666666,
                       }}>
-                      <Text style={{margin: 10}} ellipsizeMode="tail">
+                      <Text
+                        style={{
+                          margin: 10,
+                          fontFamily: 'Avenir Light',
+                          fontSize: 13,
+                        }}
+                        ellipsizeMode="tail">
                         {item.name}
                       </Text>
                     </View>

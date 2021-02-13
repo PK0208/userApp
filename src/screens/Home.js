@@ -122,7 +122,13 @@ const Home = (props) => {
                 resizeMode="contain"
               />
 
-              <Text style={{color: '#525253', fontSize: 16, fontWeight: '400'}}>
+              <Text
+                style={{
+                  color: '#525253',
+                  fontSize: 16,
+                  fontWeight: '400',
+                  fontFamily: 'ARLRDBD',
+                }}>
                 Ghee 250ml
               </Text>
               <View style={{marginHorizontal: '30%', flexDirection: 'column'}}>
@@ -140,6 +146,7 @@ const Home = (props) => {
                       fontSize: 13,
                       fontWeight: '200',
                       marginHorizontal: 10,
+                      fontFamily: 'Dosis-Medium',
                     }}>
                     {quantity}
                   </Text>
@@ -161,7 +168,12 @@ const Home = (props) => {
                     }}></Text>
                 </View>
                 <Text
-                  style={{color: '#525253', fontSize: 14, fontWeight: 'bold'}}>
+                  style={{
+                    color: '#525253',
+                    fontSize: 14,
+                    fontWeight: 'bold',
+                    fontFamily: 'ARLRDBD',
+                  }}>
                   Rs 500
                 </Text>
               </View>
@@ -254,9 +266,7 @@ const Home = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center', color: '#525253'}}>
-                A2 Milk
-              </Text>
+              <Text style={styles.categoryText}>A2 Milk</Text>
             </TouchableOpacity>
           </View>
 
@@ -277,7 +287,7 @@ const Home = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center'}}>Oil & Ghee</Text>
+              <Text style={styles.categoryText}>Oil & Ghee</Text>
             </TouchableOpacity>
           </View>
 
@@ -298,7 +308,7 @@ const Home = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center'}}>Butter</Text>
+              <Text style={styles.categoryText}>Butter</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -328,9 +338,7 @@ const Home = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center', color: '#525253'}}>
-                Panneer
-              </Text>
+              <Text style={styles.categoryText}>Panneer</Text>
             </TouchableOpacity>
           </View>
 
@@ -351,7 +359,7 @@ const Home = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center'}}>Dry fruits</Text>
+              <Text style={styles.categoryText}>Dry fruits</Text>
             </TouchableOpacity>
           </View>
 
@@ -372,7 +380,7 @@ const Home = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center'}}>Vegetables</Text>
+              <Text style={styles.categoryText}>Vegetables</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -446,9 +454,7 @@ const Home = (props) => {
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={{alignSelf: 'center', color: '#525253'}}>
-                Pooja Items
-              </Text>
+              <Text style={styles.categoryText}>Pooja Items</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -487,17 +493,25 @@ const styles = StyleSheet.create({
     borderColor: '#F7F7F7',
   },
   cardContainer: {
-    width: 110,
-    height: 80,
+    //width: 110,
+    //height: 80,
+    width: width * 0.288,
+    height: width * 0.288,
     borderRadius: 10,
     alignItems: 'center',
     //margin: 15,
     backgroundColor: '#9AD9F7',
   },
   imageContainer: {
-    width: 60,
-    height: 60,
+    width: width * 0.248,
+    height: width * 0.248,
     margin: 10,
+  },
+  categoryText: {
+    alignSelf: 'center',
+    color: '#525253',
+    fontFamily: 'ARLRDBD',
+    fontSize: 13,
   },
 });
 export default Home;

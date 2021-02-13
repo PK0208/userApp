@@ -121,7 +121,13 @@ const CartScreen = (props) => {
             alignSelf: 'center',
             margin: 5,
           }}>
-          <Text style={{color: '#525253', fontSize: 20, fontWeight: 'bold'}}>
+          <Text
+            style={{
+              color: '#525253',
+              fontSize: 20,
+              fontWeight: 'bold',
+              fontFamily: 'ARLRDBD',
+            }}>
             Confirm Order
           </Text>
         </View>
@@ -219,6 +225,7 @@ const CartScreen = (props) => {
                     color: '#525253',
                     fontSize: 14,
                     fontWeight: 'bold',
+                    fontFamily: 'ARLRDBD',
                   }}
                   numberOfLines={1}>
                   {item.name}
@@ -240,6 +247,7 @@ const CartScreen = (props) => {
                       fontSize: 13,
                       fontWeight: '200',
                       marginHorizontal: 5,
+                      fontFamily: 'Dosis-Medium',
                     }}>
                     2
                   </Text>
@@ -258,6 +266,7 @@ const CartScreen = (props) => {
                     color: '#525253',
                     fontSize: 14,
                     fontWeight: 'bold',
+                    fontFamily: 'ARLRDBD',
                   }}
                   numberOfLines={1}>
                   Rs {item.price}
@@ -285,6 +294,7 @@ const CartScreen = (props) => {
                 color: '#525253',
                 fontSize: 14,
                 fontWeight: 'bold',
+                fontFamily: 'ARLRDBD',
               }}
               numberOfLines={1}>
               Subtotal
@@ -294,6 +304,7 @@ const CartScreen = (props) => {
                 color: '#525253',
                 fontSize: 14,
                 fontWeight: 'bold',
+                fontFamily: 'ARLRDBD',
               }}
               numberOfLines={1}>
               Delivery charge
@@ -314,6 +325,7 @@ const CartScreen = (props) => {
                   fontSize: 14,
                   fontWeight: 'bold',
                   margin: 5,
+                  fontFamily: 'ARLRDBD',
                 }}
                 numberOfLines={1}>
                 Total
@@ -327,6 +339,7 @@ const CartScreen = (props) => {
                 color: '#525253',
                 fontSize: 14,
                 fontWeight: 'bold',
+                fontFamily: 'ARLRDBD',
               }}
               numberOfLines={1}>
               Rs {totalAmout}
@@ -337,6 +350,7 @@ const CartScreen = (props) => {
                 color: '#525253',
                 fontSize: 14,
                 fontWeight: 'bold',
+                fontFamily: 'ARLRDBD',
               }}
               numberOfLines={1}>
               00
@@ -349,6 +363,7 @@ const CartScreen = (props) => {
                 fontWeight: 'bold',
                 margin: 5,
                 marginTop: 10,
+                fontFamily: 'ARLRDBD',
               }}
               numberOfLines={1}>
               Rs {totalAmout}

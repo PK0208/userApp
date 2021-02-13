@@ -50,11 +50,20 @@ const Support = (props) => {
     <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
       <Appbar navigation={props.navigation} />
 
+      <Text
+        style={{
+          margin: 10,
+          fontFamily: 'Avenir Light',
+          fontSize: 13,
+          color: '#000000',
+        }}>
+        Get help with Other issues
+      </Text>
+
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
         {otherIssues.map((item) => {
           return (
-            <TouchableOpacity
-              onPress={() => props.navigation.navigate(item.route)}>
+            <TouchableOpacity>
               <View
                 style={{
                   borderWidth: 1,
@@ -72,7 +81,13 @@ const Support = (props) => {
                     justifyContent: 'space-between',
                     width: width * 0.77333333333,
                   }}>
-                  <Text style={{margin: 10}} ellipsizeMode="tail">
+                  <Text
+                    style={{
+                      margin: 10,
+                      fontFamily: 'Avenir Light',
+                      fontSize: 15,
+                    }}
+                    ellipsizeMode="tail">
                     {item.name}
                   </Text>
                 </View>
@@ -112,17 +127,27 @@ const Support = (props) => {
               fontWeight: 'bold',
               margin: 10,
               color: '#FFFFFF',
+              fontFamily: 'Avenir Black',
             }}>
             FAQs
           </Text>
         </View>
       </TouchableOpacity>
 
+      <Text
+        style={{
+          margin: 10,
+          fontFamily: 'Avenir Light',
+          fontSize: 13,
+          color: '#000000',
+        }}>
+        General queries
+      </Text>
+
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
         {generalQueries.map((item) => {
           return (
-            <TouchableOpacity
-              onPress={() => props.navigation.navigate(item.route)}>
+            <TouchableOpacity>
               <View
                 style={{
                   borderWidth: 1,

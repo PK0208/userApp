@@ -36,6 +36,17 @@ const BottomTabNavigator = () => {
         activeTintColor: '#06A3EF',
         inactiveTintColor: '#515152A5',
         barstyle: styles.container,
+        backgroundColor: '#F7F7F7',
+        style: {
+          borderTopWidth: 0,
+          backgroundColor: '#FFFFFF',
+          borderTopRightRadius: 35,
+          borderTopLeftRadius: 35,
+          borderTopColor: '#F7F7F7',
+          height: 55,
+          paddingBottom: 5,
+          position: 'absolute',
+        },
       }}>
       <Tab.Screen
         name="Home"
@@ -83,8 +94,8 @@ const BottomTabNavigator = () => {
         name="Subscriptions"
         options={{
           tabBarIcon: ({focused, color, size}) => (
-            <MatIcon
-              name={focused ? 'list-alt' : 'list-alt'}
+            <Ant
+              name={focused ? 'profile' : 'profile'}
               size={20}
               color={color}
               focused={focused}

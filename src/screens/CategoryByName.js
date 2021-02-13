@@ -84,7 +84,12 @@ const CategoryByName = (props) => {
       </View>
       <View style={[styles.box2]}>
         <View style={{flexDirection: 'row', marginLeft: 15, margin: 5}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+          <Text
+            style={{
+              fontSize: 15,
+              fontWeight: 'bold',
+              fontFamily: 'Avenir Black',
+            }}>
             {props.route.params.product_name}
           </Text>
           <Text
@@ -93,7 +98,9 @@ const CategoryByName = (props) => {
               fontWeight: 'bold',
               marginTop: 15,
               marginLeft: '70%',
-            }}>
+              fontFamily: 'ARLRDBD',
+            }}
+            numberOfLines={1}>
             700.0
           </Text>
         </View>
@@ -113,6 +120,7 @@ const CategoryByName = (props) => {
                 fontSize: 13,
                 fontWeight: '200',
                 marginHorizontal: 10,
+                fontFamily: 'Dosis-Medium',
               }}>
               {quantity}
             </Text>
@@ -128,12 +136,17 @@ const CategoryByName = (props) => {
         </View>
 
         <View style={{flexDirection: 'row', marginLeft: 15, margin: 5}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+          <Text
+            style={{
+              fontSize: 15,
+              fontWeight: 'bold',
+              fontFamily: 'Avenir Black',
+            }}>
             Product Details
           </Text>
         </View>
-        <View style={{margin: 5, marginLeft: 15}}>
-          <Text style={{fontSize: 16, color: '#000000'}} numberOfLines={5}>
+        <View style={{margin: 5, marginLeft: 15, fontFamily: 'Avenir Light'}}>
+          <Text style={{fontSize: 12, color: '#000000'}} numberOfLines={5}>
             Pure & fresh khoya - Free from adulteration!! Rich in calcium
             strengthnig the bones and teeth presence of riboflavin Pure & fresh
             khoya - Free from adulteration!! Rich in calcium strengthnig the
@@ -159,10 +172,11 @@ const CategoryByName = (props) => {
             }}>
             <Text
               style={{
-                fontSize: 18,
+                fontSize: 20,
                 fontWeight: 'bold',
                 margin: 10,
                 color: '#FFFFFF',
+                fontFamily: 'Avenir Black',
               }}>
               Add to cart
             </Text>

@@ -35,7 +35,13 @@ const ContactUs = (props) => {
             backgroundColor: '#FFFFFF',
             margin: 10,
           }}>
-          <Text style={{color: '#000000', fontSize: 16, margin: 20}}>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 16,
+              margin: 20,
+              fontFamily: 'Avenir Light',
+            }}>
             Need help? Reach out to us via chat or call and one Of our customer
             executive will be un touch shortly
           </Text>
@@ -61,6 +67,7 @@ const ContactUs = (props) => {
                   fontWeight: 'bold',
                   margin: 10,
                   color: '#FFFFFF',
+                  fontFamily: 'Avenir Black',
                 }}>
                 Call us
               </Text>
