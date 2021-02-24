@@ -17,22 +17,26 @@ import {Card, CardItem, Body} from 'native-base';
 import StickyHeaderFooterScrollView from 'react-native-sticky-header-footer-scroll-view';
 import Icon from 'react-native-vector-icons/AntDesign';
 
+import styled from 'styled-components/native';
+
+const Container = styled.ScrollView`
+  flex: 1;
+  background-color: #f7f7f7;
+`;
+
 const {height, width} = Dimensions.get('window');
 
 const Home = (props) => {
   const isFocused = useIsFocused();
   const [quantity, setQuantity] = useState(1);
 
-  useEffect(() => {}, [props, isFocused]);
+  useEffect(() => {
+    console.log('Home Screen useEffect');
+  }, [props, isFocused]);
 
   const increaseQuantity = () => {
     let tempValue = parseInt(quantity);
-    //let tempAmount = parseFloat(total);
     tempValue++;
-    //tempAmount = price * tempValue;
-    /* setTotal(tempAmount);
-    setTempState(1);
-    setQuantity(tempValue); */
     console.log('Increase', tempValue);
     setQuantity(tempValue);
     console.log('Increase quantity', quantity);
@@ -44,70 +48,54 @@ const Home = (props) => {
     } else {
       tempValue = 1;
     }
-
     console.log('decrease', tempValue);
     setQuantity(tempValue);
     console.log('decrease quantity', quantity);
-    /* let tempAmount = parseFloat(total);
-    if (tempValue <= parseInt(min)) {
-      tempValue = parseFloat(min);
-    } else {
-      tempValue--;
-    }
-    setTempState(1);
-    tempAmount = price * tempValue;
-    setTotal(tempAmount);
-    setQuantity(tempValue); */
   };
 
   return (
-    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
+    <Container>
       <Appbar navigation={props.navigation} />
-      {/* <ImageSlider /> */}
-      <ScrollView>
+      <View style={{flex: 1, marginBottom: 70}}>
         <View style={styles.formContent}>
           <View style={styles.inputContainer}>
-            {/* <Image
-          style={[styles.icon, styles.inputIcon]}
-          source={{uri: 'https://png.icons8.com/search/androidL/100/000000'}}
-        /> */}
             <Icon
               name="search1"
               color="black"
               size={25}
               style={{marginHorizontal: 15}}
-              //onPress={() => props.navigation.navigate('Home')}
             />
             <TextInput
               style={styles.inputs}
-              //ref={'txtSearch'}
               placeholder="Search"
               underlineColorAndroid="transparent"
               //onChangeText={(name_address) => this.setState({name_address})}
             />
           </View>
         </View>
-        <View style={{marginTop: 5}}>
-          <Image
-            style={{width: '100%', height: 130}}
-            source={{
-              uri:
-                'https://lh3.googleusercontent.com/nchOYzxdkZdBOK7nym2S0rjsmLeysJ7FIQOy51lLX15XgSMYP4-HR2aMY_gfurmWwMkh=s170',
-            }}
-            resizeMode="cover"
-          />
-        </View>
-        <View
-          style={{justifyContent: 'center', alignItems: 'center', margin: 5}}>
-          <Text style={{color: '#4B4A4A', fontSize: 20, fontWeight: 'bold'}}>
-            Flash Sale
-          </Text>
-        </View>
+
+        <Image
+          style={styles.bannerImage}
+          source={require('../assets/images/Homepage.jpg')}
+          resizeMode="cover"
+        />
+
+        <Text
+          style={{
+            margin: 5,
+            textAlign: 'center',
+            fontSize: 20,
+            fontWeight: 'bold',
+            color: '#4B4A4A',
+          }}>
+          Flash Sale
+        </Text>
+
         <View
           style={{
             justifyContent: 'center',
             alignItems: 'center',
-            flexDirection: 'row',
+            alignSelf: 'center',
           }}>
           <Card style={styles.cardStyle}>
             <View
@@ -132,32 +120,41 @@ const Home = (props) => {
                 Ghee 250ml
               </Text>
               <View style={{marginHorizontal: '30%', flexDirection: 'column'}}>
-                <View style={{flexDirection: 'row'}}>
-                  <Icon
-                    name="pluscircleo"
-                    color="#303843"
-                    size={18}
-                    //style={{marginHorizontal: 15}}
-                    onPress={() => increaseQuantity()}
-                  />
-                  <Text
-                    style={{
-                      color: '#525253',
-                      fontSize: 13,
-                      fontWeight: '200',
-                      marginHorizontal: 10,
-                      fontFamily: 'Dosis-Medium',
-                    }}>
-                    {quantity}
-                  </Text>
+                <View style={{flexDirection: 'row', flex: 1}}>
+                  <View>
+                    <Icon
+                      name="minuscircleo"
+                      color="#303843"
+                      size={18}
+                      style={{flex: 1}}
+                      onPress={() => increaseQuantity()}
+                    />
+                  </View>
+                  <View>
+                    <Text
+                      style={{
+                        color: '#525253',
+                        fontSize: 13,
+                        fontWeight: '200',
+                        //marginHorizontal: 10,
+                        fontFamily: 'Dosis-Medium',
+                        paddingHorizontal: 5,
+                        flex: 1,
+                      }}
+                      numberOfLines={1}>
+                      {quantity}
+                    </Text>
+                  </View>
 
-                  <Icon
-                    name="minuscircleo"
-                    color="#303843"
-                    size={18}
-                    //style={{marginHorizontal: 15}}
-                    onPress={() => decreaseQuantity()}
-                  />
+                  <View>
+                    <Icon
+                      name="pluscircleo"
+                      color="#303843"
+                      size={18}
+                      style={{flex: 1}}
+                      onPress={() => decreaseQuantity()}
+                    />
+                  </View>
                 </View>
                 <View>
                   <Text
@@ -180,89 +177,38 @@ const Home = (props) => {
             </View>
           </Card>
         </View>
-        <View>
-          <View style={{flexDirection: 'row', marginLeft: 15}}>
-            <Text style={{color: '#4B4A4A', fontWeight: 'bold', fontSize: 20}}>
-              Categories
-            </Text>
 
-            <TouchableOpacity
-              onPress={() => props.navigation.navigate('AllCategories')}>
-              <Text
-                style={{
-                  color: '#7373E0',
-                  justifyContent: 'flex-end',
-                  marginLeft: '65%',
-                  marginTop: 5,
-                }}>
-                See all
-              </Text>
-            </TouchableOpacity>
-          </View>
+        <View style={{flexDirection: 'row', marginLeft: 13, marginTop: 18}}>
+          <Text style={{color: '#4B4A4A', fontWeight: 'bold', fontSize: 20}}>
+            Categories
+          </Text>
+
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('AllCategories')}>
+            <Text
+              style={{
+                color: '#7373E0',
+                justifyContent: 'flex-end',
+                marginLeft: '65%',
+                marginTop: 5,
+                fontFamily: 'arial-bold',
+              }}>
+              See all
+            </Text>
+          </TouchableOpacity>
         </View>
-        {/* <View
-          style={{
-            flexDirection: 'row',
-            marginHorizontal: 10,
-            marginVertical: 10,
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignContent: 'center',
-            flexWrap: 'wrap',
-          }}>
-          {homePageData.map((item) => {
-            return (
-              <View
-                style={{
-                  flexDirection: 'column',
-                  //marginHorizontal: 10,
-                }}>
-                <TouchableOpacity onPress={() => console.log('Print Out')}>
-                  <Card style={styles.cardContainer}>
-                    <Image
-                      style={styles.imageContainer}
-                      source={{
-                        uri: item.image,
-                      }}
-                      resizeMode="contain"
-                    />
-                   
-                  </Card>
-                  <Text style={{alignSelf: 'center', color: '#525253'}}>
-                    {item.name}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            );
-          })}
-        </View> */}
 
         {/* product list starts */}
-
-        <View
-          style={{
-            flexDirection: 'row',
-            //marginHorizontal: 15,
-            //marginVertical: 15,
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-          }}>
-          {/* A2 Milk */}
+        <View style={styles.productView}>
           <View
             style={{
               flexDirection: 'column',
-              //marginHorizontal: 10,
             }}>
             <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  //source={require('../assets/images/new_panner.jpg')}
-                  source={{
-                    uri:
-                      'https://www.nutripaeds.co.za/wp-content/uploads/2020/09/Milk_800x800-min.png',
-                  }}
+                  source={require('../assets/images/A2Milk.jpg')}
                   resizeMode="contain"
                 />
               </Card>
@@ -270,41 +216,30 @@ const Home = (props) => {
             </TouchableOpacity>
           </View>
 
-          {/* Oil & Ghee */}
-
           <View
             style={{
               flexDirection: 'column',
-              //marginHorizontal: 10,
             }}>
-            <TouchableOpacity
-              onPress={() => console.log('POS Printer')}
-              activeOpacity={1}>
+            <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/oil_ghee.jpg')}
-                  resizeMode="contain"
+                  source={require('../assets/images/oilGheeNew.jpg')}
+                  //resizeMode="contain"
                 />
               </Card>
               <Text style={styles.categoryText}>Oil & Ghee</Text>
             </TouchableOpacity>
           </View>
-
-          {/* Butter */}
-
           <View
             style={{
               flexDirection: 'column',
-              //marginHorizontal: 10,
             }}>
-            <TouchableOpacity
-              onPress={() => console.log('Print Out')}
-              activeOpacity={1}>
+            <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/new_butter.jpg')}
+                  source={require('../assets/images/A2Milk.jpg')}
                   resizeMode="contain"
                 />
               </Card>
@@ -313,153 +248,82 @@ const Home = (props) => {
           </View>
         </View>
 
-        {/* 2nd Row */}
-
-        <View
-          style={{
-            flexDirection: 'row',
-            //marginHorizontal: 15,
-            //marginVertical: 15,
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-          }}>
-          {/* Panner */}
+        <View style={styles.productView}>
           <View
             style={{
               flexDirection: 'column',
-              //marginHorizontal: 10,
             }}>
             <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/new_panner.jpg')}
+                  source={require('../assets/images/A2Milk.jpg')}
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>Panneer</Text>
+              <Text style={styles.categoryText}>A2 Milk</Text>
             </TouchableOpacity>
           </View>
-
-          {/* Dry Fruits */}
 
           <View
             style={{
               flexDirection: 'column',
-              //marginHorizontal: 10,
             }}>
-            <TouchableOpacity
-              onPress={() => console.log('POS Printer')}
-              activeOpacity={1}>
+            <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/new_dryfruits.jpg')}
-                  resizeMode="contain"
+                  source={require('../assets/images/oilGheeNew.jpg')}
+                  //resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>Dry fruits</Text>
+              <Text style={styles.categoryText}>Oil & Ghee</Text>
             </TouchableOpacity>
           </View>
-
-          {/* Vegetables */}
-
           <View
             style={{
               flexDirection: 'column',
-              //marginHorizontal: 10,
             }}>
-            <TouchableOpacity
-              onPress={() => console.log('Print Out')}
-              activeOpacity={1}>
+            <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/leaf_vegetables.jpg')}
+                  source={require('../assets/images/A2Milk.jpg')}
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>Vegetables</Text>
+              <Text style={styles.categoryText}>Butter</Text>
             </TouchableOpacity>
           </View>
         </View>
 
         {/*  product list ends*/}
 
-        <View style={{flexDirection: 'row'}}>
-          <View style={{justifyContent: 'flex-start', marginLeft: 15}}>
-            <Text style={{color: '#4B4A4A', fontWeight: 'bold', fontSize: 20}}>
-              New Arrivals
-            </Text>
-          </View>
+        <View style={{flexDirection: 'row', marginLeft: 13, marginTop: 18}}>
+          <Text style={{color: '#4B4A4A', fontWeight: 'bold', fontSize: 20}}>
+            New Arrivals
+          </Text>
         </View>
 
-        {/* <View
-          style={{
-            flexDirection: 'row',
-            marginHorizontal: 25,
-            marginVertical: 10,
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-            alignContent: 'center',
-            flexWrap: 'wrap',
-          }}>
-          {newArrivalsData.map((item) => {
-            return (
-              <View
-                style={{
-                  flexDirection: 'column',
-                  //marginHorizontal: 10,
-                }}>
-                <TouchableOpacity onPress={() => console.log('Print Out')}>
-                  <Card style={styles.cardContainer}>
-                    <Image
-                      style={styles.imageContainer}
-                      source={{
-                        uri: item.image,
-                      }}
-                      resizeMode="contain"
-                    />
-                  </Card>
-                  <Text style={{alignSelf: 'center', color: '#525253'}}>
-                    {item.name}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            );
-          })}
-        </View> */}
-
-        <View
-          style={{
-            flexDirection: 'row',
-            //marginHorizontal: 15,
-            //marginVertical: 15,
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-          }}>
-          {/* Panner */}
+        <View style={styles.productView}>
           <View
             style={{
               flexDirection: 'column',
-              //marginHorizontal: 10,
             }}>
             <TouchableOpacity activeOpacity={1}>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/new_poojaitems.jpg')}
+                  source={require('../assets/images/A2Milk.jpg')}
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>Pooja Items</Text>
+              <Text style={styles.categoryText}>A2 Milk</Text>
             </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </Container>
   );
 };
 
@@ -485,12 +349,19 @@ const styles = StyleSheet.create({
     borderBottomColor: '#FFFFFF',
     flex: 1,
   },
+  bannerImage: {
+    width: '100%',
+    height: height * 0.18435251798,
+  },
   cardStyle: {
     width: width * 0.85285333333,
-    //height: height * 0.07194244604,
-    backgroundColor: '#FFFFFFE6',
-    borderWidth: 1,
-    borderColor: '#F7F7F7',
+    borderRadius: 8,
+  },
+  productView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
   cardContainer: {
     //width: 110,
@@ -506,11 +377,12 @@ const styles = StyleSheet.create({
     width: width * 0.248,
     height: width * 0.248,
     margin: 10,
+    overflow: 'hidden',
   },
   categoryText: {
     alignSelf: 'center',
     color: '#525253',
-    fontFamily: 'ARLRDBD',
+    fontFamily: 'arial-bold',
     fontSize: 13,
   },
 });

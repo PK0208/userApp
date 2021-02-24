@@ -34,42 +34,43 @@ export default function Appbar(props) {
   const [count, setCount] = useState(0);
   useEffect(() => {}, [props, isFocused]);
   return (
-    <View style={styles.appBarContainer}>
-      <Left>
-        <Button transparent onPress={onPress}>
-          {/* <Icon active name="bars" /> */}
-          <Ant name="bars" color="white" size={25} />
-        </Button>
-      </Left>
-      <View style={{marginRight: 50}}>
-        <Text
-          style={{
-            fontSize: width * 0.062801932367,
-            fontFamily: 'impact-regular',
-            fontWeight: 'bold',
-            color: 'white',
-          }}
-          numberOfLines={1}>
-          Ksheerdham
-        </Text>
-      </View>
-      <Right style={{flexDirection: 'row', marginHorizontal: 10}}>
-        <Icon1
-          name="notifications"
-          color="white"
-          size={25}
-          style={{marginHorizontal: 10}}
-          onPress={() => props.navigation.navigate('Notifications')}
-        />
-        <Icon1
-          name="cart-outline"
-          color="white"
-          size={25}
-          style={{marginHorizontal: 10}}
-          onPress={() => props.navigation.navigate('CartScreen')}
-        />
-      </Right>
-      {/*  <TouchableOpacity onPress={onPress}>
+    <View>
+      <TouchableOpacity style={styles.appBarContainer}>
+        <Left>
+          <Button transparent onPress={onPress}>
+            {/* <Icon active name="bars" /> */}
+            <Ant name="bars" color="white" size={25} />
+          </Button>
+        </Left>
+        <View style={{marginRight: 50}}>
+          <Text
+            style={{
+              fontSize: width * 0.062801932367,
+              fontFamily: 'impact-regular',
+              fontWeight: 'bold',
+              color: 'white',
+            }}
+            numberOfLines={1}>
+            Ksheerdham
+          </Text>
+        </View>
+        <Right style={{flexDirection: 'row', marginHorizontal: 10}}>
+          <Icon1
+            name="notifications"
+            color="white"
+            size={25}
+            style={{marginHorizontal: 10}}
+            onPress={() => props.navigation.navigate('Notifications')}
+          />
+          <Icon1
+            name="cart-outline"
+            color="white"
+            size={25}
+            style={{marginHorizontal: 10}}
+            onPress={() => props.navigation.navigate('CartScreen')}
+          />
+        </Right>
+        {/*  <TouchableOpacity onPress={onPress}>
         <Ant name="bars" color="white" size={25} />
       </TouchableOpacity>
       <View>
@@ -87,7 +88,7 @@ export default function Appbar(props) {
         size={25}
         onPress={() => props.navigation.navigate('CartScreen')}
       /> */}
-      {/* <Badge
+        {/* <Badge
         size={25}
         style={{
           position: 'absolute',
@@ -99,6 +100,7 @@ export default function Appbar(props) {
         }}>
         {count}
       </Badge> */}
+      </TouchableOpacity>
     </View>
   );
 }
@@ -113,7 +115,8 @@ const styles = StyleSheet.create({
     //justifyContent: 'space-between',
     borderRadius: 35,
     marginTop: 5,
-    overflow: 'hidden',
+    //overflow: 'hidden',
+    //position: 'relative',
   },
   titleText: {
     color: 'white',
