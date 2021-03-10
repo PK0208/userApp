@@ -41,7 +41,7 @@ const Subscriptions = (props) => {
             color: '#4C82E8',
             fontSize: 13,
             fontWeight: 'bold',
-            margin: 5,
+            margin: 8,
             fontFamily: 'ARLRDBD',
           }}>
           My Subscriptions
@@ -106,7 +106,7 @@ const Subscriptions = (props) => {
             style={{
               fontSize: 18,
               fontWeight: 'bold',
-              margin: 10,
+              margin: 5,
               color: '#FFFFFF',
             }}>
             Order Now

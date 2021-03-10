@@ -165,7 +165,13 @@ const Support = (props) => {
                     justifyContent: 'space-between',
                     width: width * 0.77333333333,
                   }}>
-                  <Text style={{margin: 10}} ellipsizeMode="tail">
+                  <Text
+                    style={{
+                      margin: 10,
+                      fontFamily: 'Avenir Light',
+                      fontSize: 15,
+                    }}
+                    ellipsizeMode="tail">
                     {item.name}
                   </Text>
                 </View>

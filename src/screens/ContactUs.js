@@ -65,7 +65,7 @@ const ContactUs = (props) => {
                 style={{
                   fontSize: 18,
                   fontWeight: 'bold',
-                  margin: 10,
+                  margin: 5,
                   color: '#FFFFFF',
                   fontFamily: 'Avenir Black',
                 }}>

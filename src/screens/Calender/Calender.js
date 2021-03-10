@@ -15,14 +15,21 @@ import axios from 'axios';
 import {Card, CardItem, Body} from 'native-base';
 import {Calendar} from 'react-native-calendars';
 
+import styled from 'styled-components/native';
 const {height, width} = Dimensions.get('window');
+
+const Container = styled.ScrollView`
+  flex: 1;
+  background-color: #f7f7f7;
+`;
+
 const Calender = (props) => {
   const isFocused = useIsFocused();
 
   useEffect(() => {}, [props, isFocused]);
 
   return (
-    <View style={{height: '100%', backgroundColor: '#F7F7F7'}}>
+    <Container>
       <Appbar navigation={props.navigation} />
       {/* <ImageSlider /> */}
       <ScrollView>
@@ -45,7 +52,7 @@ const Calender = (props) => {
                 color: '#4C82E8',
                 fontSize: 13,
                 fontWeight: 'bold',
-                margin: 5,
+                margin: 8,
                 fontFamily: 'ARLRDBD',
               }}>
               My Subscriptions
@@ -114,7 +121,12 @@ const Calender = (props) => {
           </Text>
         </View>
 
-        <View style={{justifyContent: 'center', alignItems: 'center'}}>
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginHorizontal: 5,
+          }}>
           <Text
             numberOfLines={2}
             style={{
@@ -138,6 +150,7 @@ const Calender = (props) => {
             borderRadius: 25,
             backgroundColor: '#4FDD5F',
             borderColor: '#4FDD5F',
+            marginBottom: 90,
           }}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate('AllCategories')}>
@@ -146,7 +159,7 @@ const Calender = (props) => {
                 color: '#FFFFFF',
                 fontSize: 18,
                 fontWeight: 'bold',
-                margin: 10,
+                margin: 5,
                 fontFamily: 'Avenir Black',
               }}>
               Order Now
@@ -154,7 +167,7 @@ const Calender = (props) => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </View>
+    </Container>
   );
 };
 

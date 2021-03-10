@@ -105,7 +105,7 @@ const Home = (props) => {
                 margin: 15,
               }}>
               <Image
-                style={{width: '20%', height: 50}}
+                style={{width: '20%', height: 65}}
                 source={require('../assets/images/new_ghee.jpg')}
                 resizeMode="contain"
               />
@@ -119,7 +119,11 @@ const Home = (props) => {
                 }}>
                 Ghee 250ml
               </Text>
-              <View style={{marginHorizontal: '30%', flexDirection: 'column'}}>
+              <View
+                style={{
+                  marginHorizontal: '30%',
+                  flexDirection: 'column',
+                }}>
                 <View style={{flexDirection: 'row', flex: 1}}>
                   <View>
                     <Icon
@@ -127,7 +131,7 @@ const Home = (props) => {
                       color="#303843"
                       size={18}
                       style={{flex: 1}}
-                      onPress={() => increaseQuantity()}
+                      onPress={() => decreaseQuantity()}
                     />
                   </View>
                   <View>
@@ -152,7 +156,7 @@ const Home = (props) => {
                       color="#303843"
                       size={18}
                       style={{flex: 1}}
-                      onPress={() => decreaseQuantity()}
+                      onPress={() => increaseQuantity()}
                     />
                   </View>
                 </View>
@@ -204,7 +208,14 @@ const Home = (props) => {
             style={{
               flexDirection: 'column',
             }}>
-            <TouchableOpacity activeOpacity={1}>
+            <TouchableOpacity
+              activeOpacity={1}
+              onPress={() =>
+                props.navigation.navigate('CategoryByName', {
+                  product_name: 'Panneer',
+                  product_image: '../assets/images/new_panner.jpg',
+                })
+              }>
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
@@ -239,7 +250,7 @@ const Home = (props) => {
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/A2Milk.jpg')}
+                  source={require('../assets/images/butterNew.jpg')}
                   resizeMode="contain"
                 />
               </Card>
@@ -257,11 +268,11 @@ const Home = (props) => {
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/A2Milk.jpg')}
+                  source={require('../assets/images/pannerNew.jpg')}
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>A2 Milk</Text>
+              <Text style={styles.categoryText}>Panner</Text>
             </TouchableOpacity>
           </View>
 
@@ -273,11 +284,11 @@ const Home = (props) => {
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/oilGheeNew.jpg')}
+                  source={require('../assets/images/dryFruitsNew.jpg')}
                   //resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>Oil & Ghee</Text>
+              <Text style={styles.categoryText}>Dry Fruits</Text>
             </TouchableOpacity>
           </View>
           <View
@@ -288,11 +299,11 @@ const Home = (props) => {
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/A2Milk.jpg')}
+                  source={require('../assets/images/vegetablesNew.jpg')}
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>Butter</Text>
+              <Text style={styles.categoryText}>Vegetables</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -314,11 +325,11 @@ const Home = (props) => {
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/A2Milk.jpg')}
+                  source={require('../assets/images/poojaNew.jpg')}
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>A2 Milk</Text>
+              <Text style={styles.categoryText}>Pooja Items</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -368,7 +379,7 @@ const styles = StyleSheet.create({
     //height: 80,
     width: width * 0.288,
     height: width * 0.288,
-    borderRadius: 10,
+    borderRadius: 25,
     alignItems: 'center',
     //margin: 15,
     backgroundColor: '#9AD9F7',
@@ -378,6 +389,7 @@ const styles = StyleSheet.create({
     height: width * 0.248,
     margin: 10,
     overflow: 'hidden',
+    borderRadius: 25,
   },
   categoryText: {
     alignSelf: 'center',

@@ -44,9 +44,14 @@ const DrawerContent = (props) => {
             marginTop: 5,
             backgroundColor: '#FFFFFF',
             flexDirection: 'column',
-            borderRadius: 25,
+            //borderRadius: 25,
             justifyContent: 'center',
             alignItems: 'center',
+            marginBottom: 15,
+            borderBottomWidth: 1,
+            elevation: 2,
+            borderColor: '#00000029',
+            shadowColor: '#00000029',
           }}>
           <View style={{margin: 5}}>
             <Image
@@ -119,7 +124,7 @@ const DrawerContent = (props) => {
                   onPress={() => props.navigation.navigate(item.route)}>
                   <View
                     style={{
-                      borderWidth: 1,
+                      borderWidth: 1 / 2,
                       borderRadius: 25,
                       borderColor: '#707070',
                       backgroundColor: '#FFFFFF',
@@ -136,7 +141,7 @@ const DrawerContent = (props) => {
                       }}>
                       <Text
                         style={{
-                          margin: 10,
+                          margin: 5,
                           fontFamily: 'Avenir Light',
                           fontSize: 13,
                         }}
@@ -150,7 +155,7 @@ const DrawerContent = (props) => {
                         name="right"
                         color="#000000"
                         size={20}
-                        style={{marginTop: 10, marginRight: 14}}
+                        style={{marginTop: 10 / 2, marginRight: 14}}
                       />
                     </View>
                   </View>

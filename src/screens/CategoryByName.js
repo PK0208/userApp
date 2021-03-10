@@ -76,10 +76,8 @@ const CategoryByName = (props) => {
       <View style={[styles.box, styles.box1]}>
         <Image
           style={styles.imageContainer}
-          source={{
-            uri: props.route.params.product_image,
-          }}
-          resizeMode="contain"
+          source={require('../assets/images/pannerNewBg.jpg')}
+          resizeMode="cover"
         />
       </View>
       <View style={[styles.box2]}>
@@ -99,9 +97,10 @@ const CategoryByName = (props) => {
               marginTop: 15,
               marginLeft: '70%',
               fontFamily: 'ARLRDBD',
+              marginRight: -15,
             }}
             numberOfLines={1}>
-            700.0
+            ₹ 700.0
           </Text>
         </View>
 
@@ -174,7 +173,7 @@ const CategoryByName = (props) => {
               style={{
                 fontSize: 20,
                 fontWeight: 'bold',
-                margin: 10,
+                margin: 5,
                 color: '#FFFFFF',
                 fontFamily: 'Avenir Black',
               }}>

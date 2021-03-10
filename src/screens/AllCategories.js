@@ -160,7 +160,7 @@ const AllCategories = (props) => {
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/new_panner.jpg')}
+                  source={require('../assets/images/pannerNew.jpg')}
                   resizeMode="contain"
                 />
               </Card>
@@ -177,11 +177,11 @@ const AllCategories = (props) => {
               <Card style={styles.cardContainer}>
                 <Image
                   style={styles.imageContainer}
-                  source={require('../assets/images/new_panner.jpg')}
+                  source={require('../assets/images/butterNew.jpg')}
                   resizeMode="contain"
                 />
               </Card>
-              <Text style={styles.categoryText}>Paneer</Text>
+              <Text style={styles.categoryText}>Butter</Text>
             </TouchableOpacity>
           </View>
 

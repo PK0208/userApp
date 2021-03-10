@@ -315,9 +315,10 @@ const CartScreen = (props) => {
                 flexDirection: 'column',
                 borderTopWidth: 2,
                 borderColor: '#8B8C8D',
-                width: '370%',
+                width: '380%',
                 margin: 5,
-                marginLeft: -5,
+                //marginLeft: -5,
+                //marginRight: 0,
               }}>
               <Text
                 style={{
@@ -390,7 +391,7 @@ const CartScreen = (props) => {
               style={{
                 fontSize: 18,
                 fontWeight: 'bold',
-                margin: 10,
+                margin: 5,
                 color: '#FFFFFF',
               }}>
               Place Order
